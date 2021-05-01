@@ -1,0 +1,14 @@
+// .baemin 컨테이너 레이아웃
+.baemin {
+    @include flexbox(column);
+    min-height: 100vh;
+    
+    @at-root .main {
+        flex: 1 1 0;
+        background-color: yellow;
+    }
+
+    @at-root .footer {
+        margin-top: auto;
+    }
+}
