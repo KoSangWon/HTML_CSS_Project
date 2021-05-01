@@ -1,3 +1,7 @@
-body {
-    background-color: aqua;
-}
+@import './../node_modules/normalize-scss/fork-versions/default/normalize';
+@import './config/';
+@import './utils/';
+@import './base/';
+@import './components/';
+@import './layout/';
+@import './pages/';
