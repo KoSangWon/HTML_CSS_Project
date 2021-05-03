@@ -466,6 +466,56 @@ template {
   display: none;
 }
 
+.a11yHidden {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+[class] {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: inherit;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.responsiveImg {
+  max-width: 100%;
+  height: auto;
+}
+
 .baemin {
   display: flex;
   flex-direction: column;
@@ -494,6 +544,81 @@ template {
 .footer {
   background-color: yellowgreen;
   min-height: 150px;
+}
+
+@keyframes opa1 {
+  0% {
+    opacity: 0;
+  }
+  17% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opa2 {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  33% {
+    opacity: 0;
+    display: block;
+  }
+  50% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opa3 {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  66% {
+    opacity: 0;
+    display: block;
+  }
+  83% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.banner {
+  background-color: #E2E2E2;
+  position: relative;
+  width: 100%;
+}
+.banner__item:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: opa1 9s infinite linear;
+}
+.banner__item:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: opa2 9s infinite linear;
+}
+.banner__item:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: opa3 9s infinite linear;
 }
 
 /*# sourceMappingURL=style.css.map */
