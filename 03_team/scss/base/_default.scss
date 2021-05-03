@@ -1,0 +1,40 @@
+// 목록 안쪽 여백 및 불릿 제거
+ul,
+ol {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+// 기본 여백 제거 
+[class] {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: inherit;
+}
+
+// 목록 안쪽 여백 및 불릿 제거 ---------------------------------------------------------- /
+ul,
+ol {
+    padding-left: 0;
+    list-style: none;
+}
+
+// 이미지에 발생하는 갭 제거
+img {
+    vertical-align: middle;
+}
+
+// 링크 요소의 밑줄 및 글자 색상 재 정의
+a {
+    color: inherit;
+    text-decoration: none;
+}
