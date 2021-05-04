@@ -1,0 +1,37 @@
+/* --- span 태그의 기본 레이아웃 --- */
+
+@mixin checkBox{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #717171;
+    @content;
+}
+
+/* ----- 체크박스 옆 텍스트 속성 ---- */
+@mixin checkBoxText{
+    font-size: rem(14);
+    line-height: rem(14);
+    @content;
+}
+
+/* ---- 체크박스 input요소가 위에 덮어져야 한다. --- */
+@mixin checkBoxInput($top:0,$left:0){
+    opacity: 0;
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    @content;
+}
+
+/* ---- 체크박스가 체크되었을 때 span요소의 변화 ---- */
+@mixin checkBoxChecked{
+    background: url(../images/checkbox_white@3x.png) no-repeat;
+    background-size: 12px 12px;
+    background-color: #717171;
+}
+

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
    ========================================================================== */
@@ -516,6 +517,10 @@ a {
   height: auto;
 }
 
+/* --- span 태그의 기본 레이아웃 --- */
+/* ----- 체크박스 옆 텍스트 속성 ---- */
+/* ---- 체크박스 input요소가 위에 덮어져야 한다. --- */
+/* ---- 체크박스가 체크되었을 때 span요소의 변화 ---- */
 .baemin {
   display: flex;
   flex-direction: column;
@@ -527,6 +532,7 @@ a {
 .main {
   flex: 1 1 0;
   background-color: yellow;
+  padding: 18px 20px;
 }
 
 .footer {
@@ -537,7 +543,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  min-height: 100px;
+  min-height: 30px;
   background-color: aqua;
 }
 
@@ -619,6 +625,249 @@ a {
   top: 0;
   left: 0;
   animation: opa3 9s infinite linear;
+}
+
+/* ---------------------------------- */
+/*              헤더 영역 작성              */
+/* ---------------------------------- */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  /* ------------ 헤더 영역(모바일) ----------- */
+  /* ----------- 헤더 영역 데스크탑 ----------- */
+}
+.nav-header__user {
+  display: block;
+  padding: 1.5625em;
+  background-color: white;
+}
+.name {
+  display: block;
+  font-size: 1.25rem;
+  padding-bottom: 0.1875em;
+}
+
+.greeting {
+  font-size: 2.125rem;
+}
+
+.header__member-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.header__member-link {
+  display: inline-block;
+  padding: 0.625em;
+  margin: 0.375em;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    /* -------------- 로고 영역 (모바일) ------------- */
+    /* ------------- 메뉴 열기 (모바일) ------------- */
+    /* -------- 모달 네비게이션 기본 레이아웃 (모바일) -------- */
+    /* --- 로그인, 로그아웃 상태에 따라 모달 문구가 다르다 (모바일) -- */
+    /* ---------- 모달 네비게이션 활성화 (모바일) ---------- */
+    /* --------- 주요 네비게이션 (모바일) --------- */
+  }
+  .header__logo {
+    height: 45px;
+  }
+  .header__logo__link {
+    display: inline-block;
+  }
+  .header__img__image {
+    max-width: 102px;
+  }
+  .open-menu {
+    padding: 0;
+    margin: 0;
+    height: 45px;
+    width: 45px;
+    background: url(../images/nav-icon@3x.png) white 50% no-repeat;
+    background-size: 60% 60%;
+    border: none;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+  }
+  .modal__exit {
+    position: absolute;
+    right: 0.625em;
+    top: 0.625em;
+  }
+
+  .float-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 25%;
+    right: 0;
+    bottom: 0;
+    background: #f3f3f3;
+    z-index: 10;
+  }
+
+  .--noUser, .--User {
+    display: none;
+  }
+
+  .--isLogin .--User {
+    display: block;
+  }
+
+  .--isLogout .--noUser {
+    display: block;
+  }
+
+  .modal.--isActivate {
+    display: block;
+  }
+  .modal.--isActivate + div {
+    display: block;
+  }
+
+  .header__member-item {
+    text-align: center;
+  }
+  .header__member-item img {
+    width: 40px;
+    height: 40px;
+  }
+  .header__member-item span {
+    display: block;
+    text-align: center;
+  }
+  .navigation__category {
+    background-color: white;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__member-list img {
+    display: none;
+  }
+}
+
+/* ------------------------ */
+/*         장바구니 css         */
+/* ------------------------ */
+/* ---- 장바구니의 서브 네비게이션 ---- */
+.sub-top-wrapper {
+  background-color: red;
+  position: relative;
+  /* --- 모바일 일 때 없애야 하는 요소 -- */
+  /* ------- 뒤로 가기 버튼 ------- */
+}
+@media screen and (max-width: 767px) {
+  .sub-top-wrapper__progress-list {
+    display: none;
+  }
+  .sub-top-wrapper h2 {
+    background-color: skyblue;
+    text-align: center;
+    font-size: 1.125rem;
+    padding: 16px 0;
+    margin: 0;
+  }
+}
+.sub-top-wrapper__button__back {
+  display: block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ------- 전체선택 체크박스 레이아웃 ------ */
+.item-section {
+  background-color: #f6f6f6;
+}
+.item-section__checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+  position: relative;
+}
+.item-section__input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.item-section__checkbox__label {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #717171;
+  background: #717171;
+}
+.item-section__checkbox__text {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+}
+.--isSelected + span {
+  background: url(../images/checkbox_white@3x.png) no-repeat;
+  background-size: 12px 12px;
+  background-color: #717171;
+}
+
+/* --- 장바구니 아이템 목록 레이아웃 --- */
+.item-list {
+  /* ------- 모바일 레이아웃 ------- */
+}
+.item-list__item {
+  display: none;
+}
+.item-list__item.--isSelected {
+  display: list-item;
+  border: 1px solid red;
+  padding: 20px;
+}
+.item-list__thumb {
+  width: 66px;
+  height: 75px;
+  float: left;
+}
+.item-list__description {
+  padding: 0;
+  margin: 0;
+}
+.item-list__description * {
+  margin: 0;
+  padding-bottom: 5px;
+}
+.item-list__option:not(.--isExist) {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .item-list__coupon {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
