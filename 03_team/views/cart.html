@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>배민 문방구 장바구니</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>배민문방구 장바구니</title>
 </head>
 <body>
-    
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div class="baemin">
+    <header class="header">
+        <h1 class="header__logo">
+            <a href="#" class="header__logo__link"><img src="../images/logo.png" alt="로고 이미지" class="header__img__image"/></a>
+            <!-- <span>로고 이미지</span> 나중에 IR 이미지 -->
+        </h1>
+        <button class="open-menu" aria-label="메뉴 열기">
+        </button>
+        <div class="modal --isActivate">
+        </div>
+        <div class="float-menu">
+            <section class="nav-header">
+                <h2 class="a11yHidden">사용자 로그인 창</h2>
+                <a href="#" class="nav-header__user --isLogin">
+                    <span class="--noUser"><strong><span aria-hidden="true">앗!</span>로그인</strong>이 필요해요<span>&#62;</span></span>
+                    <span class="--User">
+                        <span class="name">윤다은님&#62;</span>
+                        <strong class="greeting">나이스 투 미츄&#33;</strong></span>
+                </a>
+            </section>
+            <section class="header__member">
+                <h2 class="a11yHidden">사용자 메뉴 영역</h2>
+                <ul class="header__member-list">
+                    <li class="header__member-item">
+                        <a class="header__member-link" href="#">
+                            <img src="../images/add-user.svg" alt="회원가입" />
+                            <span>회원가입</span>
+                        </a>
+                    </li>
+                    <li class="header__member-item">
+                        <a href="#" class="header__member-link">
+                            <img src="../images/login.svg" alt="로그인" />
+                            <span>로그인</span>
+                        </a>
+                    </li>
+                    <li class="header__member-item">
+                        <a href="#" class="header__member-link">
+                            <img src="../images/mypage.svg" alt="마이페이지" />
+                            <span>마이페이지</span>
+                        </a>
+                    </li>
+                    <li class="header__member-item">
+                        <a href="#" class="header__member-link">
+                            <img src="../images/cart.svg" alt="장바구니" />
+                            <span>장바구니</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <nav class="navigation">
+                <section class="navigation__category">
+                    <h2>카테고리</h2>
+                    <ul class="navigation__category-list">
+                        <li class="navigation--category-item"><span>전체</span></li>
+                        <li class="navigation--category-item"><span>문구</span></li>
+                        <li class="navigation--category-item"><span>리빙</span></li>
+                        <li class="navigation--category-item"><span>책</span></li>
+                        <li class="navigation--category-item"><span>을지로에디션</span></li>
+                        <li class="navigation--category-item"><span>ㅋㅋ에디션</span></li>
+                        <li class="navigation--category-item"><span>배달이친구들</span></li>
+                        <li class="navigation--category-item"><span>선물세트</span></li>
+                        <li class="navigation--category-item"><span>콜라보레이션</span></li>
+                    </ul>
+                </section>
+            </nav>
+            <button class="modal__exit" aria-label="팝업 닫기">X</button>
+        </div>
+    </header>
+    <main class="main">
+        <div class="sub-top-wrapper">
+            <h2>장바구니</h2>
+            <a class="sub-top-wrapper__button__back"></a>
+            <ul class="sub-top-wrapper__progress-list">
+                <li class="sub-top-wrapper__progress-list__item --isCurrent">01 장바구니<span></span></li>
+                <li class="sub-top-wrapper__progress-list__item --isCurrent">02 주문서 작성<span></span></li>
+                <li class="sub-top-wrapper__progress-list__item --isCurrent">03 주문완료<span></span></li>
+            </ul>
+        </div>
+        <section class="item-section">
+            <h3 class="a11yHidden">장바구니 목록</h3>
+            <div class="item-section__checkbox">
+                <input type="checkbox" id="allCheck" class="item-section__input --isSelected"/>
+                <span class="item-section__checkbox__label"></span>
+                <label for="allCheck"><span class="item-section__checkbox__text">전체선택</span></label>
+            </div>
+            <ul class="item-list">
+                <li class="item-list__item --isSelected">
+                    <a href="#">
+                        <img src="../images/thumbnail.jpeg" alt="" class="item-list__thumb"/>
+                        <dl class="item-list__description">
+                            <dt class="item-list__name">유해물질이 나오지 않는 지우개</dt>
+                            <dd class="item-list__count">수량 : 1</dd>
+                            <dd class="item-list__option --isExist">베이지색</dd>
+                            <dd class="item-list__price">1350원</dd>
+                        </dl>
+                    </a>
+                    <!-- 지우기 -->
+                    <button class="item-list__coupon"></button>
+                    <button class="item-list__change-option"></button>
+                    <label for="eraseSelect"></label>
+                    <span class="item-list__checkbox__label"></span>
+                    <input type="text" id="eraseSelect" />
+                    <button class="item-list__delete"></button>
+                </li>
+            </ul>
+        </section>
+        <div class="order">
+            <section class="price">
+                <h3></h3>
+                <dl>
+                    <dt class="price__product"></dt>
+                    <dd class="price__product__detail"></dd>
+                </dl>
+                <dl>
+                    <dt class="price__delivery"></dt>
+                    <dd class="price__delivery__detail"></dd>
+                </dl>
+                <em class="caution"></em>
+                <dl>
+                    <dt class="price__total"></dt>
+                    <dd class="price__total__detail"></dd>
+                </dl>
+                <!-- 지우기 -->
+                <em class="mileage"></em>
+            </section>
+            <section class="order">
+                <h3></h3>
+                <ul class="order__button-list">
+                    <li>
+                        <button class="order__button__select__delete"></button>
+                    </li>
+                    <li>
+                        <button class="order__button__select__wish"></button>
+                    </li>
+                    <li>
+                        <a href="" class="order__button__select__order"></a>
+                    </li>
+                    <li>
+                        <a href="" class="order__button__all__order"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</div>    
 </body>
 </html>
