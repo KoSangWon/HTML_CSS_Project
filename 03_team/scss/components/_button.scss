@@ -1,0 +1,52 @@
+// 상품 설명 버튼
+.goods-view__btn {
+  display: block;
+  @include autoMargin;
+  font-size: rem(13);
+  border: 0;
+  font-weight: 700;
+  padding: em(12, 13) 0;
+  color: #333;
+  background-color: transparent;
+  cursor: pointer;
+
+  &-share:before {
+    content: '';
+    display: inline-block;
+    background-image: url("../images/goods/icon_share.png");
+    background-repeat: no-repeat;
+    background-size: 13px;
+    width: 13px;
+    height: 14px;
+    margin-right: 3px;
+    vertical-align:sub;
+  }
+
+  &-heart:before {
+    content: '';
+    display: inline-block;
+    background-image: url("../images/goods/icon_heart.png");
+    background-repeat: no-repeat;
+    background-size: 13px;
+    width: 13px;
+    height: 14px;
+    margin-right: 3px;
+    vertical-align:sub;
+  }
+}
+
+.btn-down {
+  background-image: url("../images/goods/btn_minus.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+.btn-up {
+  background-image: url("../images/goods/btn_plus.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50%;
+  cursor: pointer;
+}

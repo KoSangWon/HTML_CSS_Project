@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <div class="baemin">
+    <!-- 헤더 -->
+    <header class="header">헤더</header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main">
+      <!-- 상단의 설명 및 이미지 -->
+      <section class="goods-view">
+        <div class="goods-view__info-box">
+          <!-- 상품 이름 -->
+          <h2 class="goods-view__heading">효자손. 혼자서도 잘해요</h2>
+          <!-- 상품 가격 박스-->
+          <div class="goods-view__price-box">
+            <!-- 할인 퍼센트 -->
+            <span class="goods-view__discount-rate">20%</span>
+            <!-- 원래 가격 및 현재가격 -->
+            <div class="goods-view__prices">
+              <span class="goods-view__prices-original">
+                <del>12,900</del>원
+              </span>
+              <span class="goods-view__prices-current">
+                <strong>10,320</strong>원
+              </span>
+            </div>
+          </div>
+          <!-- 상품 정보 -->
+          <dl class="goods-view__sub-info">
+            <dt class="goods-view__sub-info-key">
+              배송정보
+            </dt>
+            <dd class="goods-view__sub-info-value">
+              2,500원(3만원 이상 구매 시 무료배송)<br />
+              오후 2시 당일배송마감
+            </dd>
+          </dl>
+          <!-- 버튼 그룹 -->
+          <ul class="goods-view__btn-box">
+            <li>
+              <button type="button" class="goods-view__btn goods-view__btn-share">
+                공유하기
+              </button>
+            </li>
+            <li>
+              <button type="button" class="goods-view__btn goods-view__btn-heart">
+                찜하기
+              </button>
+            </li>
+          </ul>
+          <!-- 구매하기  -->
+          <div class="goods-view__order-box">
+            <div class="goods-view__options">
+              <span class="goods-view__prdt-name">효자손. 혼자서도 잘해요</span>
+              <span class="goods-view__order-cnt">
+                <button type="button" class="btn-down" title="감소"></button>
+                <input type="number" title="수량" value="1" readonly />
+                <button type="button" class="btn-up" title="증가"></button>
+              </span>
+              <span class="goods-view__order-price">
+                <strong>10,320</strong>원
+              </span>
+            </div>
+            <dl class="goods-view__total">
+              <dt>총 합계금액</dt>
+              <dd>10,320원</dd>
+            </dl>
+            <ul class="goods-view__order-box-links">
+              <li>
+                <a href="#" class="goods-view__cart-link">장바구니 담기</a>
+              </li>
+              <li>
+                <a href="#" class="goods-view__order-link">바로구매</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 이미지 -->
+        <div class="goods-view__image-box">
+          <img src="../images/goods/goods_img.jpg" alt="효자손. 혼자서도 잘해요" class="goods-img" />
+        </div>
+      </section>
+
+      <!-- 탭 -->
+      <ul class="tabs">
+        <li><a href="#" role="button">상세정보</a></li>
+        <li><a href="#" role="button">기본정보</a></li>
+        <li><a href="#" role="button">상품후기</a></li>
+        <li><a href="#" role="button">상품문의</a></li>
+      </ul>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">푸터</footer>
+  </div>
+</body>
+
+</html>
