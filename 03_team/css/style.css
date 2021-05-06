@@ -794,7 +794,7 @@ figure {
   width: 10%;
   height: 20px;
   cursor: pointer;
-  background: url("./../../images/icon_sprites.png") 0 0 no-repeat;
+  background: url("../images/icon_sprites.png") 0 0 no-repeat;
   -webkit-background-size: 200% 100%;
   background-size: 200% 100%;
   background-color: white;
@@ -810,7 +810,7 @@ figure {
   width: 10%;
   height: 20px;
   cursor: pointer;
-  background: url("./../../images/icon_sprites.png") 100% 0 no-repeat;
+  background: url("../images/icon_sprites.png") 100% 0 no-repeat;
   -webkit-background-size: 200% 100%;
   background-size: 200% 100%;
   background-color: white;
@@ -835,7 +835,7 @@ figure {
 
 /* 추천 선물 이미지 */
 .pick__item-img__first {
-  background: url("./../../images/pick_sprites.png") 0 0 no-repeat;
+  background: url("../images/pick_sprites.png") 0 0 no-repeat;
   -webkit-background-size: 200% 100%;
   background-size: 200% 100%;
 }
@@ -852,7 +852,7 @@ figure {
   }
 }
 .pick__item-img__second {
-  background: url("./../../images/pick_sprites.png") 100% 0 no-repeat;
+  background: url("../images/pick_sprites.png") 100% 0 no-repeat;
   -webkit-background-size: 200% 100%;
   background-size: 200% 100%;
 }
@@ -1753,7 +1753,7 @@ figure {
   }
 }
 .goods-view__image-box img {
-  width: 100%;
+  max-width: 100%;
 }
 
 /* ----------- 탭 ---------- */
