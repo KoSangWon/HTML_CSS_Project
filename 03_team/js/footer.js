@@ -1,7 +1,9 @@
-function btn_click() {
+document.addEventListener('DOMContentLoaded', function () {
     const btn = document.getElementById('btn1');
-    btn.classList.toggle('on');
-
     const hidden_address = document.getElementById('hidden_address');
-    hidden_address.classList.toggle('hidden');
-}
+
+    btn.addEventListener('click', function () {
+        btn.classList.toggle('on');
+        hidden_address.classList.toggle('hidden');
+    });
+});
