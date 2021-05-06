@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>상품 상세 페이지</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
@@ -26,12 +26,12 @@
         </h1>
         <button class="open-menu" aria-label="메뉴 열기">
         </button>
-        <div class="modal --isActivate">
+        <div class="modal">
         </div>
         <div class="float-menu">
           <section class="nav-header">
             <h2 class="a11yHidden">사용자 로그인 창</h2>
-            <a href="#" class="nav-header__user --isLogin">
+            <a href="#" class="nav-header__user --isLogout">
               <span class="--noUser"><strong class="emphasize"><span aria-hidden="true"
                     class="surprized-text">앗!</span>로그인</strong>이 필요해요<span aria-hidden="true">&#62;</span></span>
               <span class="--User">
@@ -105,10 +105,10 @@
             <!-- 원래 가격 및 현재가격 -->
             <div class="goods-view__prices">
               <span class="goods-view__prices-original">
-                <del>12,900</del>원
+                <del>12,900원</del>
               </span>
               <span class="goods-view__prices-current">
-                <strong>10,320</strong>원
+                <strong>10,320원</strong>
               </span>
             </div>
           </div>
@@ -194,9 +194,11 @@
             allowfullscreen></iframe>
         </div>
 
-        <img src="../images/goods/goods_born.jpg" alt="배민문방구 효자손은 마음을 담아 제작하였습니다." class="goods__detail-info-born" />
-        <img src="../images/goods/goods_make.jpg" alt="효자손이 재탄생하였습니다." class="goods__detail-info-new-make" />
-        <img src="../images/goods/goods_etc.jpg" alt="배민 효자손의 쓸데없는 설명입니다." class="goods__detail-info-etc" />
+        <img src="../images/goods/goods_born.jpg" alt="" class="goods__detail-info-born" />
+        <figure>
+          <img src="../images/goods/goods_make.jpg" alt="효자손 이미지" class="goods__detail-info-new-make" />
+          <figcaption class="a11yHidden">배민문방구 효자손은 마음을 담아 제작하였습니다. 효자손이 재탄생하였습니다.</figcaption>
+        </figure>
 
         <details open class="goods__details">
           <summary>상품필수 정보</summary>
@@ -374,6 +376,7 @@
     </footer>
   </div>
   <script src="../js/tab-control.js"></script>
+  <script src="../js/header.js"></script>
 </body>
 
 </html>
