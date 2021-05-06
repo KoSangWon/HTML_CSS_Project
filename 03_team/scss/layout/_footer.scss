@@ -1,4 +1,214 @@
 .footer {
-    background-color: yellowgreen;
-    min-height: 150px;
+    background: #f6f6f6;
+    width: 100%;
+    min-height: 187px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #717171;
+    width: 100%;
+    box-sizing: border-box;
+
+    address {
+        font-style: normal;
+    }
+
+    &__end {
+        margin-bottom: em(100);
+    }
+
+    &__service-center {
+        @include flexbox(column, center, center);
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    &__service-link {
+        @include flexbox(row, center, center);
+        margin: em(12) 0 em(30) 0;
+    }
+
+    &__button {
+        margin: 0 0 em(40) 0;
+        text-align: center;
+    }
+
+    &__btn {
+        display: inline-block;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: em(10);
+    }
+
+    @include mobile {
+        font-size: 12px;
+        color: #b5b5b5;
+        font-weight: bold;
+
+        .hidden {
+            display: none;
+        }
+
+        &__service {
+            padding-top: em(30);
+        }
+
+        &__service-center {
+            &1 {
+                font-size: 14px;
+            }
+
+            &2 {
+                // color: #7e7e7e;
+                font-size: 30px;
+                font-weight: bold;
+                margin: em(5) 0 em(5) 0;
+            }
+        }
+
+        &__service-link {
+            li {
+                padding-left: em(20);
+                display: block;
+                font-size: 14px;
+                font-weight: 500;
+                position: relative;
+            }
+
+            li:not(:first-child)::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: em(9);
+                top: em(3);
+                width: em(1);
+                height: em(15);
+                background: #717171;
+            }
+        }
+
+        &__end {
+            text-align: center;
+            margin-top: em(40);
+            font-size: 12px;
+            line-height: 20px;
+            color: #b5b5b5;
+            font-weight: bold;
+        }
+
+        &__address {
+            li {
+                margin-bottom: em(7);
+            }
+        }
+    }
+
+    @include desktop {
+        padding-left: em(350);
+        font-size: 12px;
+        font-weight: 500;
+        @include flexbox(column);
+        position: relative;
+
+        .hidden_desk {
+            display: none;
+        }
+
+        .hidden {
+            display: block;
+        }
+
+        &__logo {
+            img {
+                position: absolute;
+                width: em(150);
+                height: em(180);
+                top: em(34);
+                left: em(70);
+            }
+        }
+
+        &__end-notice {
+            display: none;
+        }
+
+        &__service {
+            @include flexbox(column);
+            margin-top: em(30);
+        }
+
+        &__service-link {
+            order: -1;
+
+            li {
+                margin-right: em(15);
+            }
+        }
+
+        &__service-center {
+            @include flexbox;
+
+            li {
+                margin-right: em(15);
+                position: relative;
+            }
+
+            li:not(:last-child)::after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: em(-7);
+                top: em(1);
+                width: em(1);
+                height: em(16);
+                background: #717171;
+            }
+        }
+
+        &__service-link {
+            @include flexbox;
+
+            order: -1;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: em(18);
+
+            li {
+                margin: 0 em(40) em(15) 0;
+            }
+        }
+
+        &__address-info {
+            li {
+                margin-right: em(15);
+                position: relative;
+            }
+
+            li:not(:last-child)::after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: em(-7);
+                top: em(1);
+                width: em(1);
+                height: em(16);
+                background: #717171;
+            }
+        }
+
+        &__address {
+            ul {
+                @include flexbox;
+            }
+        }
+
+        &__end-right {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        &__button {
+            display: none;
+        }
+    }
 }

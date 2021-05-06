@@ -1,449 +1,642 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-
-<head>
+  <head>
     <link rel="stylesheet" href="./css/style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>배민문방구</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="baemin">
-        <ul class="skip --isTabbed">
-            <li class="skip__navigation"><a href="#user-list">사용자 메뉴 바로가기</a></li>
-            <li class="skip__navigation"><a href="#product-list">상품 목록 바로가기</a></li>
-            <li class="skip__navigation"><a href="#main">본문 바로가기</a></li>
-            <li class="skip__navigation"><a href="#footer">하단 영역 바로가기</a></li>
-        </ul>
-        <header class="header">
-            <div class="header-inner">
-                <h1 class="header__logo">
-                    <a href="#" class="header__logo__link"><img src="../images/logo.png" alt="로고 이미지"
-                            class="header__img__image" /></a>
-                </h1>
-                <button class="open-menu" aria-label="메뉴 열기">
-                </button>
-                <div class="modal --isActivate">
-                </div>
-                <div class="float-menu">
-                    <section class="nav-header">
-                        <h2 class="a11yHidden">사용자 로그인 창</h2>
-                        <a href="#" class="nav-header__user --isLogin">
-                            <span class="--noUser"><strong class="emphasize"><span aria-hidden="true"
-                                        class="surprized-text">앗!</span>로그인</strong>이 필요해요<span
-                                    aria-hidden="true">&#62;</span></span>
-                            <span class="--User">
-                                <span class="name">윤다은님<span aria-hidden="true">&#62;</span></span>
-                                <strong class="emphasize">나이스 투 미츄&#33;</strong></span>
-                        </a>
-                    </section>
-                    <section class="header__member">
-                        <h2 class="a11yHidden">사용자 메뉴 영역</h2>
-                        <div class="header__member-wrapper">
-                            <ul class="header__member-list" id="user-list">
-                                <li class="header__member-item">
-                                    <a class="header__member-link" href="#">
-                                        <img src="../images/add-user.svg" alt="" />
-                                        <span>회원가입</span>
-                                    </a>
-                                </li>
-                                <li class="header__member-item">
-                                    <a href="#" class="header__member-link">
-                                        <img src="../images/login.svg" alt="" />
-                                        <span>로그인</span>
-                                    </a>
-                                </li>
-                                <li class="header__member-item">
-                                    <a href="#" class="header__member-link">
-                                        <img src="../images/mypage.svg" alt="" />
-                                        <span>마이페이지</span>
-                                    </a>
-                                </li>
-                                <li class="header__member-item">
-                                    <a href="#" class="header__member-link">
-                                        <img src="../images/cart.svg" alt="" />
-                                        <span>장바구니</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <nav class="navigation">
-                        <div class="navigation__category">
-                            <span class="navigation__title">카테고리</span>
-                            <ul class="navigation__category-list" id="product-list">
-                                <li class="navigation__category-item"><a href="#"><span>전체</span></a></li>
-                                <li class="navigation__category-item"><a href="#"><span>문구</span></a></li>
-                                <li class="navigation__category-item"><a href="#"><span>리빙</span></a></li>
-                                <li class="navigation__category-item"><a href="#"><span>책</span></a></li>
-                                <li class="navigation__category-item"><a href="#"><span>을지로에디션</span></a></li>
-                                <li class="navigation__category-item"><a href="#"><span>ㅋㅋ에디션</span></a></li>
-                                <li class="navigation__category-item"><a href="#"><span>배달이친구들</span></a></li>
-                                <li class="navigation__category-item"><a href="#"><span>선물세트</span></a></li>
-                                <li class="navigation__category-item"><a href="#"><span>콜라보레이션</span></a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <button class="modal__exit" aria-label="메뉴 닫기">&#215;</button>
-                </div>
-            </div>
-        </header>
-        <main class="main" id="main">
-            <h2 class="a11yHidden">상품</h2>
-            <section class="banner">
-                <h3 class="a11yHidden">홍보상품</h3>
-                <ul class="banner__list">
-                    <li class="banner__item is--top">
-                        <h4 class="a11yHidden">재생지에 콩기름으로 인쇄한 일기장</h4>
-                        <a href="#">
-                            <img class="responsiveImg" src="./images/banner1.png" alt="" />
-                        </a>
-                    </li>
-                    <li class="banner__item">
-                        <h4 class="a11yHidden">요모포켓X배달이친구들 독고배달이 포켓</h4>
-                        <a href="#" >
-                            <img class="responsiveImg" src="./images/banner2.gif" alt="요모포켓X배달이친구들 독고배달이 포켓" />
-                        </a>
-                    </li>
-                    <li class="banner__item">
-                        <h4 class="a11yHidden">감사, 사랑, 용돈 돈봉투</h4>
-                        <a href="#" >
-                            <img class="responsiveImg" src="./images/banner3.png" alt="감사, 사랑, 용돈 돈봉투" />
-                        </a>
-                    </li>
+      <ul class="skip --isTabbed">
+        <li class="skip__navigation">
+          <a href="#user-list">사용자 메뉴 바로가기</a>
+        </li>
+        <li class="skip__navigation">
+          <a href="#product-list">상품 목록 바로가기</a>
+        </li>
+        <li class="skip__navigation"><a href="#main">본문 바로가기</a></li>
+        <li class="skip__navigation">
+          <a href="#footer">하단 영역 바로가기</a>
+        </li>
+      </ul>
+      <header class="header">
+        <div class="header-inner">
+          <h1 class="header__logo">
+            <a href="#" class="header__logo__link"
+              ><img
+                src="../images/logo.png"
+                alt="로고 이미지"
+                class="header__img__image"
+            /></a>
+          </h1>
+          <button class="open-menu" aria-label="메뉴 열기"></button>
+          <div class="modal --isActivate"></div>
+          <div class="float-menu">
+            <section class="nav-header">
+              <h2 class="a11yHidden">사용자 로그인 창</h2>
+              <a href="#" class="nav-header__user --isLogin">
+                <span class="--noUser"
+                  ><strong class="emphasize"
+                    ><span aria-hidden="true" class="surprized-text">앗!</span
+                    >로그인</strong
+                  >이 필요해요<span aria-hidden="true">&#62;</span></span
+                >
+                <span class="--User">
+                  <span class="name"
+                    >윤다은님<span aria-hidden="true">&#62;</span></span
+                  >
+                  <strong class="emphasize">나이스 투 미츄&#33;</strong></span
+                >
+              </a>
+            </section>
+            <section class="header__member">
+              <h2 class="a11yHidden">사용자 메뉴 영역</h2>
+              <div class="header__member-wrapper">
+                <ul class="header__member-list" id="user-list">
+                  <li class="header__member-item">
+                    <a class="header__member-link" href="#">
+                      <img src="../images/add-user.svg" alt="" />
+                      <span>회원가입</span>
+                    </a>
+                  </li>
+                  <li class="header__member-item">
+                    <a href="#" class="header__member-link">
+                      <img src="../images/login.svg" alt="" />
+                      <span>로그인</span>
+                    </a>
+                  </li>
+                  <li class="header__member-item">
+                    <a href="#" class="header__member-link">
+                      <img src="../images/mypage.svg" alt="" />
+                      <span>마이페이지</span>
+                    </a>
+                  </li>
+                  <li class="header__member-item">
+                    <a href="#" class="header__member-link">
+                      <img src="../images/cart.svg" alt="" />
+                      <span>장바구니</span>
+                    </a>
+                  </li>
                 </ul>
+              </div>
             </section>
-            <section class="products">
-                <div class="products__main">
-                    <div class="products__best">
-                        <h3 class="products__best-heading">잘나가요</h3>
-                        <ul class="products__list best__list">
-                            <li class="products__item best__item">
-                                <a href="#" >
-                                    <img class="responsiveImg" src="./images/best1.png" alt="ㅋㅋ골고루 양말 세트" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info" href="#" >
-                                        <h4 class="product__name">ㅋㅋ골고루 양말 세트</h4>
-                                        <span class="product__price">22,000원</span>
-                                        <del class="product__price-origin">27,500원</del>
-                                        <em class="product__sale">20%</em>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="products__item best__item">
-                                <a href="#" >
-                                    <img class="responsiveImg" src="./images/best2.png" alt="효자손. 혼자서도 잘해요" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info" href="#" >
-                                        <h4 class="product__name">효자손. 혼자서도 잘해요</h4>
-                                        <span class="product__price">10,3200원</span>
-                                        <del class="product__price-origin">12,900원</del>
-                                        <em class="product__sale">20%</em>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="products__item best__item">
-                                <a href="#" >
-                                    <img class="responsiveImg" src="./images/best3.png" alt="파일. 선생님 감사해요" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info" href="#" >
-                                        <h4 class="product__name">파일. 선생님 감사해요</h4>
-                                        <span class="product__price">1,200원</span>
-                                        <del class="product__price-origin">1,500원</del>
-                                        <em class="product__sale">20%</em>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="products__item  best__item only-desktop-item">
-                                <a href="#" >
-                                    <img class="responsiveImg" src="./images/best4.png" alt="작은 쇼핑백. 축복" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info" href="#" >
-                                        <h4 class="product__name">작은 쇼핑백. 축복</h4>
-                                        <span class="product__price">1,620원</span>
-                                        <del class="product__price-origin">1,800원</del>
-                                        <em class="product__sale">10%</em>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+            <nav class="navigation">
+              <div class="navigation__category">
+                <span class="navigation__title">카테고리</span>
+                <ul class="navigation__category-list" id="product-list">
+                  <li class="navigation__category-item">
+                    <a href="#"><span>전체</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>문구</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>리빙</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>책</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>을지로에디션</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>ㅋㅋ에디션</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>배달이친구들</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>선물세트</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>콜라보레이션</span></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <button class="modal__exit" aria-label="메뉴 닫기">&#215;</button>
+          </div>
+        </div>
+      </header>
+      <main class="main" id="main">
+        <h2 class="a11yHidden">상품</h2>
+        <section class="banner">
+          <h3 class="a11yHidden">홍보상품</h3>
+          <ul class="banner__list">
+            <li class="banner__item is--top">
+              <h4 class="a11yHidden">재생지에 콩기름으로 인쇄한 일기장</h4>
+              <a href="#">
+                <img class="responsiveImg" src="./images/banner1.png" alt="" />
+              </a>
+            </li>
+            <li class="banner__item">
+              <h4 class="a11yHidden">요모포켓X배달이친구들 독고배달이 포켓</h4>
+              <a href="#">
+                <img
+                  class="responsiveImg"
+                  src="./images/banner2.gif"
+                  alt="요모포켓X배달이친구들 독고배달이 포켓"
+                />
+              </a>
+            </li>
+            <li class="banner__item">
+              <h4 class="a11yHidden">감사, 사랑, 용돈 돈봉투</h4>
+              <a href="#">
+                <img
+                  class="responsiveImg"
+                  src="./images/banner3.png"
+                  alt="감사, 사랑, 용돈 돈봉투"
+                />
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="products">
+          <div class="products__main">
+            <div class="products__best">
+              <h3 class="products__best-heading">잘나가요</h3>
+              <ul class="products__list best__list">
+                <li class="products__item best__item">
+                  <a href="#">
+                    <img
+                      class="responsiveImg"
+                      src="./images/best1.png"
+                      alt="ㅋㅋ골고루 양말 세트"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">ㅋㅋ골고루 양말 세트</h4>
+                      <span class="product__price">22,000원</span>
+                      <del class="product__price-origin">27,500원</del>
+                      <em class="product__sale">20%</em>
+                    </a>
+                  </div>
+                </li>
+                <li class="products__item best__item">
+                  <a href="#">
+                    <img
+                      class="responsiveImg"
+                      src="./images/best2.png"
+                      alt="효자손. 혼자서도 잘해요"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">효자손. 혼자서도 잘해요</h4>
+                      <span class="product__price">10,3200원</span>
+                      <del class="product__price-origin">12,900원</del>
+                      <em class="product__sale">20%</em>
+                    </a>
+                  </div>
+                </li>
+                <li class="products__item best__item">
+                  <a href="#">
+                    <img
+                      class="responsiveImg"
+                      src="./images/best3.png"
+                      alt="파일. 선생님 감사해요"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">파일. 선생님 감사해요</h4>
+                      <span class="product__price">1,200원</span>
+                      <del class="product__price-origin">1,500원</del>
+                      <em class="product__sale">20%</em>
+                    </a>
+                  </div>
+                </li>
+                <li class="products__item best__item only-desktop-item">
+                  <a href="#">
+                    <img
+                      class="responsiveImg"
+                      src="./images/best4.png"
+                      alt="작은 쇼핑백. 축복"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">작은 쇼핑백. 축복</h4>
+                      <span class="product__price">1,620원</span>
+                      <del class="product__price-origin">1,800원</del>
+                      <em class="product__sale">10%</em>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="products__new">
+              <h3 class="products__new-heading">새로 나왔어요</h3>
+              <ul class="products__list new__list">
+                <li class="products__item new__item">
+                  <a href="#">
+                    <img
+                      src="./images/new1.png"
+                      alt="유해물질이 나오지 않는 지우개"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">
+                        유해물질이 나오지 않는 지우개
+                      </h4>
+                      <div>
+                        <span class="product__price">1,350원</span>
+                        <del class="product__price-origin">1,500원</del>
+                      </div>
+                      <em class="product__sale">10%</em>
+                    </a>
+                    <div class="like">
+                      <span class="a11yHidden">찜</span>
                     </div>
-                    <div class="products__new">
-                        <h3 class="products__new-heading">새로 나왔어요</h3>
-                        <ul class="products__list new__list">
-                            <li class="products__item new__item">
-                                <a href="#" >
-                                    <img src="./images/new1.png" alt="유해물질이 나오지 않는 지우개" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info"  href="#">
-                                        <h4 class="product__name">유해물질이 나오지 않는 지우개</h4>
-                                        <div>
-                                            <span class="product__price">1,350원</span>
-                                            <del class="product__price-origin">1,500원</del>
-                                        </div>
-                                        <em class="product__sale">10%</em>
-                                    </a>
-                                    <div class="like">
-                                        <span class="a11yHidden">찜</span>
-                                    </div>
-                                    <div class="cart">
-                                        <span class="a11yHidden">장바구니</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="products__item new__item">
-                                <a href="#" >
-                                    <img src="./images/new2.png" alt="재생지에 콩기름으로 인쇄한 일기장" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info"  href="#">
-                                        <h4 class="product__name">재생지에 콩기름으로 인쇄한 일기장</h4>
-                                        <div>
-                                            <span class="product__price">3,150원</span>
-                                            <del class="product__price-origin">3,500원</del>
-                                        </div>
-                                        <em class="product__sale">10%</em>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="products__item new__item">
-                                <a href="#" >
-                                    <img src="./images/new3.png" alt="커피찌꺼기를 재활용해 손으로 만든 연필" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info"  href="#">
-                                        <h4 class="product__name">커피찌꺼기를 재활용해 손으로 만든 연필</h4>
-                                        <div>
-                                            <span class="product__price">2,250원</span>
-                                            <del class="product__price-origin">2,500원</del>
-                                        </div>
-                                        <em class="product__sale">10%</em>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="products__item new__item">
-                                <a href="#" >
-                                    <img src="./images/new4.png" alt="화학표백을 하지 않은 재생지로 만든 메모잇" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info"  href="#">
-                                        <h4 class="product__name">화학표백을 하지 않은 재생지로 만든 메모잇</h4>
-                                        <div>
-                                            <span class="product__price">2,070원</span>
-                                            <del class="product__price-origin">2,300원</del>
-                                        </div>
-                                        <em class="product__sale">10%</em>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="products__item new__item">
-                                <a href="#" >
-                                    <img src="./images/new5.png" alt="스웨거x배민. 룸 스프레이 집중" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info"  href="#">
-                                        <h4 class="product__name">스웨거x배민. 룸 스프레이 집중</h4>
-                                        <div>
-                                            <span class="product__price">15,200원</span>
-                                            <del class="product__price-origin">19,000원</del>
-                                        </div>
-                                        <em class="product__sale">20%</em>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="products__item new__item only-desktop-item">
-                                <a href="#" >
-                                    <img src="./images/new6.png" alt="매거진F No.15 Egg" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info"  href="#">
-                                        <h4 class="product__name">매거진F No.15 Egg</h4>
-                                        <div>
-                                            <span class="product__price">13,500원</span>
-                                            <del class="product__price-origin">15,000원</del>
-                                        </div>
-                                        <em class="product__sale">10%</em>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="products__item new__item only-desktop-item">
-                                <a href="#" >
-                                    <img src="./images/new7.png" alt="세븐일레븐 주문하신 커피 5종" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info"  href="#">
-                                        <h4 class="product__name">세븐일레븐 주문하신 커피 5종</h4>
-                                        <div>
-                                            <span class="product__price">9,900원</span>
-                                            <del class="product__price-origin">11,000원</del>
-                                        </div>
-                                        <em class="product__sale">10%</em>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="products__item new__item">
-                                <a href="#" >
-                                    <img src="./images/new8.png" alt="떡볶이 키트.떡볶이가 필요해" />
-                                </a>
-                                <div class="product">
-                                    <a class="product__info"  href="#">
-                                        <h4 class="product__name">떡볶이 키트.떡볶이가 필요해</h4>
-                                        <div>
-                                            <span class="product__price">11,000원</span>
-                                            <del class="product__price-origin">30,000원</del>
-                                        </div>
-                                        <em class="product__sale">63%</em>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="cart">
+                      <span class="a11yHidden">장바구니</span>
                     </div>
-                </div>
-                <div class="mds__pick">
-                    <h3 class="mds__pick-heading">선물하기 딱 좋아요!</h3>
-                    <ul class="pick__list">
-                        <li>
-                            <a class="pick__item" href="#" >
-                                <div class="pick__item-img__first"></div>
-                                <div class="pick__item-info">
-                                    <span class="pick__item-info__desc">선물 고민 끝!</span>
-                                    <h4 class="pick__item-info__title">잘나가요 세트</h4>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="pick__item" href="#" >
-                                <div class="pick__item-img__second"></div>
-                                <div class="pick__item-info">
-                                    <span class="pick__item-info__desc">발끝까지 힘 줄 때</span>
-                                    <h4 class="pick__item-info__title">양말세트</h4>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                  </div>
+                </li>
+                <li class="products__item new__item">
+                  <a href="#">
+                    <img
+                      src="./images/new2.png"
+                      alt="재생지에 콩기름으로 인쇄한 일기장"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">
+                        재생지에 콩기름으로 인쇄한 일기장
+                      </h4>
+                      <div>
+                        <span class="product__price">3,150원</span>
+                        <del class="product__price-origin">3,500원</del>
+                      </div>
+                      <em class="product__sale">10%</em>
+                    </a>
+                  </div>
+                </li>
+                <li class="products__item new__item">
+                  <a href="#">
+                    <img
+                      src="./images/new3.png"
+                      alt="커피찌꺼기를 재활용해 손으로 만든 연필"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">
+                        커피찌꺼기를 재활용해 손으로 만든 연필
+                      </h4>
+                      <div>
+                        <span class="product__price">2,250원</span>
+                        <del class="product__price-origin">2,500원</del>
+                      </div>
+                      <em class="product__sale">10%</em>
+                    </a>
+                  </div>
+                </li>
+                <li class="products__item new__item">
+                  <a href="#">
+                    <img
+                      src="./images/new4.png"
+                      alt="화학표백을 하지 않은 재생지로 만든 메모잇"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">
+                        화학표백을 하지 않은 재생지로 만든 메모잇
+                      </h4>
+                      <div>
+                        <span class="product__price">2,070원</span>
+                        <del class="product__price-origin">2,300원</del>
+                      </div>
+                      <em class="product__sale">10%</em>
+                    </a>
+                  </div>
+                </li>
+                <li class="products__item new__item">
+                  <a href="#">
+                    <img
+                      src="./images/new5.png"
+                      alt="스웨거x배민. 룸 스프레이 집중"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">
+                        스웨거x배민. 룸 스프레이 집중
+                      </h4>
+                      <div>
+                        <span class="product__price">15,200원</span>
+                        <del class="product__price-origin">19,000원</del>
+                      </div>
+                      <em class="product__sale">20%</em>
+                    </a>
+                  </div>
+                </li>
+                <li class="products__item new__item only-desktop-item">
+                  <a href="#">
+                    <img src="./images/new6.png" alt="매거진F No.15 Egg" />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">매거진F No.15 Egg</h4>
+                      <div>
+                        <span class="product__price">13,500원</span>
+                        <del class="product__price-origin">15,000원</del>
+                      </div>
+                      <em class="product__sale">10%</em>
+                    </a>
+                  </div>
+                </li>
+                <li class="products__item new__item only-desktop-item">
+                  <a href="#">
+                    <img
+                      src="./images/new7.png"
+                      alt="세븐일레븐 주문하신 커피 5종"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">
+                        세븐일레븐 주문하신 커피 5종
+                      </h4>
+                      <div>
+                        <span class="product__price">9,900원</span>
+                        <del class="product__price-origin">11,000원</del>
+                      </div>
+                      <em class="product__sale">10%</em>
+                    </a>
+                  </div>
+                </li>
+                <li class="products__item new__item">
+                  <a href="#">
+                    <img
+                      src="./images/new8.png"
+                      alt="떡볶이 키트.떡볶이가 필요해"
+                    />
+                  </a>
+                  <div class="product">
+                    <a class="product__info" href="#">
+                      <h4 class="product__name">떡볶이 키트.떡볶이가 필요해</h4>
+                      <div>
+                        <span class="product__price">11,000원</span>
+                        <del class="product__price-origin">30,000원</del>
+                      </div>
+                      <em class="product__sale">63%</em>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mds__pick">
+            <h3 class="mds__pick-heading">선물하기 딱 좋아요!</h3>
+            <ul class="pick__list">
+              <li>
+                <a class="pick__item" href="#">
+                  <div class="pick__item-img__first"></div>
+                  <div class="pick__item-info">
+                    <span class="pick__item-info__desc">선물 고민 끝!</span>
+                    <h4 class="pick__item-info__title">잘나가요 세트</h4>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="pick__item" href="#">
+                  <div class="pick__item-img__second"></div>
+                  <div class="pick__item-info">
+                    <span class="pick__item-info__desc">발끝까지 힘 줄 때</span>
+                    <h4 class="pick__item-info__title">양말세트</h4>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-                <div class="products__sale">
-                    <h3 class="products__sale-heading">지금은 할인 중</h3>
-                    <ul class="products__list sale__list">
-                        <li class="products__item sale__item">
-                            <a href="#" >
-                                <img class="responsiveImg" src="./images/sale1.png" alt="ㅋㅋ골고루 양말 세트" />
-                            </a>
-                            <div class="product">
-                                <a class="product__info" href="#" >
-                                    <h4 class="product__name">ㅋㅋ골고루 양말 세트</h4>
-                                    <span class="product__price">22,000원</span>
-                                    <del class="product__price-origin">27,500원</del>
-                                    <em class="product__sale">20%</em>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="products__item sale__item">
-                            <a href="#" >
-                                <img class="responsiveImg" src="./images/sale2.png" alt="효자손. 혼자서도 잘해요" />
-                            </a>
-                            <div class="product">
-                                <a class="product__info" href="#" >
-                                    <h4 class="product__name">효자손. 혼자서도 잘해요</h4>
-                                    <span class="product__price">10,3200원</span>
-                                    <del class="product__price-origin">12,900원</del>
-                                    <em class="product__sale">20%</em>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="products__item sale__item">
-                            <a href="#" >
-                                <img class="responsiveImg" src="./images/sale3.png" alt="파일. 선생님 감사해요" />
-                            </a>
-                            <div class="product">
-                                <a class="product__info" href="#" >
-                                    <h4 class="product__name">파일. 선생님 감사해요</h4>
-                                    <span class="product__price">1,200원</span>
-                                    <del class="product__price-origin">1,500원</del>
-                                    <em class="product__sale">20%</em>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="products__item  sale__item">
-                            <a href="#" >
-                                <img class="responsiveImg" src="./images/sale4.png" alt="작은 쇼핑백. 축복" />
-                            </a>
-                            <div class="product">
-                                <a class="product__info" href="#" >
-                                    <h4 class="product__name">작은 쇼핑백. 축복</h4>
-                                    <span class="product__price">1,620원</span>
-                                    <del class="product__price-origin">1,800원</del>
-                                    <em class="product__sale">10%</em>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="products__item sale__item">
-                            <a href="#" >
-                                <img class="responsiveImg" src="./images/sale5.png" alt="ㅋㅋ골고루 양말 세트" />
-                            </a>
-                            <div class="product">
-                                <a class="product__info" href="#" >
-                                    <h4 class="product__name">ㅋㅋ골고루 양말 세트</h4>
-                                    <span class="product__price">22,000원</span>
-                                    <del class="product__price-origin">27,500원</del>
-                                    <em class="product__sale">20%</em>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="products__item sale__item">
-                            <a href="#" >
-                                <img class="responsiveImg" src="./images/sale6.png" alt="효자손. 혼자서도 잘해요" />
-                            </a>
-                            <div class="product">
-                                <a class="product__info" href="#" >
-                                    <h4 class="product__name">효자손. 혼자서도 잘해요</h4>
-                                    <span class="product__price">10,3200원</span>
-                                    <del class="product__price-origin">12,900원</del>
-                                    <em class="product__sale">20%</em>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="products__item sale__item">
-                            <a href="#" >
-                                <img class="responsiveImg" src="./images/sale7.png" alt="파일. 선생님 감사해요" />
-                            </a>
-                            <div class="product">
-                                <a class="product__info" href="#" >
-                                    <h4 class="product__name">파일. 선생님 감사해요</h4>
-                                    <span class="product__price">1,200원</span>
-                                    <del class="product__price-origin">1,500원</del>
-                                    <em class="product__sale">20%</em>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="products__item  sale__item">
-                            <a href="#" >
-                                <img class="responsiveImg" src="./images/sale8.png" alt="작은 쇼핑백. 축복" />
-                            </a>
-                            <div class="product">
-                                <a class="product__info" href="#" >
-                                    <h4 class="product__name">작은 쇼핑백. 축복</h4>
-                                    <span class="product__price">1,620원</span>
-                                    <del class="product__price-origin">1,800원</del>
-                                    <em class="product__sale">10%</em>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+          <div class="products__sale">
+            <h3 class="products__sale-heading">지금은 할인 중</h3>
+            <ul class="products__list sale__list">
+              <li class="products__item sale__item">
+                <a href="#">
+                  <img
+                    class="responsiveImg"
+                    src="./images/sale1.png"
+                    alt="ㅋㅋ골고루 양말 세트"
+                  />
+                </a>
+                <div class="product">
+                  <a class="product__info" href="#">
+                    <h4 class="product__name">ㅋㅋ골고루 양말 세트</h4>
+                    <span class="product__price">22,000원</span>
+                    <del class="product__price-origin">27,500원</del>
+                    <em class="product__sale">20%</em>
+                  </a>
                 </div>
+              </li>
+              <li class="products__item sale__item">
+                <a href="#">
+                  <img
+                    class="responsiveImg"
+                    src="./images/sale2.png"
+                    alt="효자손. 혼자서도 잘해요"
+                  />
+                </a>
+                <div class="product">
+                  <a class="product__info" href="#">
+                    <h4 class="product__name">효자손. 혼자서도 잘해요</h4>
+                    <span class="product__price">10,3200원</span>
+                    <del class="product__price-origin">12,900원</del>
+                    <em class="product__sale">20%</em>
+                  </a>
+                </div>
+              </li>
+              <li class="products__item sale__item">
+                <a href="#">
+                  <img
+                    class="responsiveImg"
+                    src="./images/sale3.png"
+                    alt="파일. 선생님 감사해요"
+                  />
+                </a>
+                <div class="product">
+                  <a class="product__info" href="#">
+                    <h4 class="product__name">파일. 선생님 감사해요</h4>
+                    <span class="product__price">1,200원</span>
+                    <del class="product__price-origin">1,500원</del>
+                    <em class="product__sale">20%</em>
+                  </a>
+                </div>
+              </li>
+              <li class="products__item sale__item">
+                <a href="#">
+                  <img
+                    class="responsiveImg"
+                    src="./images/sale4.png"
+                    alt="작은 쇼핑백. 축복"
+                  />
+                </a>
+                <div class="product">
+                  <a class="product__info" href="#">
+                    <h4 class="product__name">작은 쇼핑백. 축복</h4>
+                    <span class="product__price">1,620원</span>
+                    <del class="product__price-origin">1,800원</del>
+                    <em class="product__sale">10%</em>
+                  </a>
+                </div>
+              </li>
+              <li class="products__item sale__item">
+                <a href="#">
+                  <img
+                    class="responsiveImg"
+                    src="./images/sale5.png"
+                    alt="ㅋㅋ골고루 양말 세트"
+                  />
+                </a>
+                <div class="product">
+                  <a class="product__info" href="#">
+                    <h4 class="product__name">ㅋㅋ골고루 양말 세트</h4>
+                    <span class="product__price">22,000원</span>
+                    <del class="product__price-origin">27,500원</del>
+                    <em class="product__sale">20%</em>
+                  </a>
+                </div>
+              </li>
+              <li class="products__item sale__item">
+                <a href="#">
+                  <img
+                    class="responsiveImg"
+                    src="./images/sale6.png"
+                    alt="효자손. 혼자서도 잘해요"
+                  />
+                </a>
+                <div class="product">
+                  <a class="product__info" href="#">
+                    <h4 class="product__name">효자손. 혼자서도 잘해요</h4>
+                    <span class="product__price">10,3200원</span>
+                    <del class="product__price-origin">12,900원</del>
+                    <em class="product__sale">20%</em>
+                  </a>
+                </div>
+              </li>
+              <li class="products__item sale__item">
+                <a href="#">
+                  <img
+                    class="responsiveImg"
+                    src="./images/sale7.png"
+                    alt="파일. 선생님 감사해요"
+                  />
+                </a>
+                <div class="product">
+                  <a class="product__info" href="#">
+                    <h4 class="product__name">파일. 선생님 감사해요</h4>
+                    <span class="product__price">1,200원</span>
+                    <del class="product__price-origin">1,500원</del>
+                    <em class="product__sale">20%</em>
+                  </a>
+                </div>
+              </li>
+              <li class="products__item sale__item">
+                <a href="#">
+                  <img
+                    class="responsiveImg"
+                    src="./images/sale8.png"
+                    alt="작은 쇼핑백. 축복"
+                  />
+                </a>
+                <div class="product">
+                  <a class="product__info" href="#">
+                    <h4 class="product__name">작은 쇼핑백. 축복</h4>
+                    <span class="product__price">1,620원</span>
+                    <del class="product__price-origin">1,800원</del>
+                    <em class="product__sale">10%</em>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <h2 class="a11yHidden">배민 푸터</h2>
+        <!-- footer service start -->
+        <section class="footer__service">
+          <div class="footer__logo hidden">
+            <img src="../images/footer_logo_new.png" alt="로고" />
+          </div>
+          <ul class="footer__service-center">
+            <li class="footer__service-center1">배민문방구 고객센터</li>
+            <li class="footer__service-center2">1670-9902</li>
+            <li>월-금 13:00~18:00 / 주말・공휴일 휴무</li>
+            <li>배민문방구 인스타그램 @baemin_store</li>
+          </ul>
+          <ul class="footer__service-link">
+            <li><a href="">공지사항</a></li>
+            <li><a href="">1:1 문의</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">개인정보처리방침</a></li>
+            <li class="hidden"><a href="">판매처 안내</a></li>
+          </ul>
+        </section>
+        <!-- footer service end -->
+        <!-- footer button start -->
 
-            </section>
-        </main>
-        <footer class="footer"></footer>
+        <div class="footer__button">
+          <a href="#" role="button" id="btn1">자세히보기</a>
+        </div>
+        <!-- footer button end -->
+        <!-- footer__address start -->
+
+        <div id="hidden_address" class="hidden">
+          <section class="footer__address">
+            <address class="footer__address-info">
+              <ul>
+                <li>(주)우아한형제들</li>
+                <li>대표 : 김범준</li>
+                <li>주소 : 서울특별시 송파구 위례성대로 2 장은빌딩</li>
+              </ul>
+              <ul>
+                <li>사업자번호 : 120-87-65763</li>
+                <li>통신판매업신고 : 2012-서울송파-0515</li>
+                <li>이메일 : baemin_store@woowahan.com</li>
+              </ul>
+              <ul>
+                <li>고객센터 : 1670-9902</li>
+                <li>팩스 : 050-6050-0400</li>
+                <li class="hidden_desk">이메일 : baemin_store@woowahan.com</li>
+                <li>호스팅제공 : 엔에이치엔고도(주)</li>
+              </ul>
+            </address>
+          </section>
+          <!-- footer__address end -->
+          <!-- footer__end start -->
+
+          <p class="footer__end-notice">
+            고객님의 안전거래를 위해 현금 등으로 결제 시 <br />
+            NHN한국사이버결제(주)의 구매안전 서비스를 이용하실 수 있습니다.
+            <br />
+            <a href="#">[서비스 가입사실 확인 ]</a>
+          </p>
+        </div>
+        <section class="footer__end">
+          <small class="footer__end-right">
+            &copy; Woowa Brothers Corp. All right Reserved
+          </small>
+          <!-- <div>
+                Icons made by
+                <a href="https://www.freepik.com/" title="Freepik"> &copy; Freepik</a> from
+                <a href="https://www.flaticon.com/" title="Flaticon"></a>
+                   www.flaticon.com</a
+                >
+              </div> -->
+        </section>
+        <!-- footer__end end -->
+      </footer>
+      <!-- footer 끝 -->
     </div>
-</body>
-
+  </body>
 </html>

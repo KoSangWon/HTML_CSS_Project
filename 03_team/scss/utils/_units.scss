@@ -6,6 +6,7 @@ $rootUnit: 16px !default;
     @return ($value / ($value * 0 + 1));
 }
 
+
 // px을 rem 단위로 변경하는 함수 
 @function rem($value, $base: $rootUnit) {
     @return (removeUnit($value / $base)) * 1rem;
