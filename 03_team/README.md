@@ -62,17 +62,17 @@ Sass 사용 시 BEM 컨벤션을 사용하였습니다.
 
 수정 후
 
-<img src="./images/md/skip_nav_after.png" width="1100px">
+<img src="./images/md/skip_nav_after.png" width="1100px" style="border: 1px solid black;">
 
 스킵 네비게이션을 통해 반복되는 메뉴에 대한 우회를 막습니다.
 
 #### 시맨틱 마크업
 
 수정 전
-<img src="./images/md/tag_before.png" width="1100px">
+<img src="./images/md/tag_before.png" width="1100px" style="border: 1px solid black;">
 
 수정 후
-<img src="./images/md/tag_after.png" width="1100px">
+<img src="./images/md/tag_after.png" width="1100px" style="border: 1px solid black;">
 
 시맨틱 태그를 활용하였기 때문에 의미 전달이 명확합니다.
 
@@ -80,11 +80,11 @@ Sass 사용 시 BEM 컨벤션을 사용하였습니다.
 
 수정 전
 
-<img src="./images/md/close_before.png" width="575px">
+<img src="./images/md/close_before.png" width="575px" style="border: 1px solid black;">
 
 수정 후
 
-<img src="./images/md/close_after.png" width="575px">
+<img src="./images/md/close_after.png" width="575px" style="border: 1px solid black;">
 
 키보드로도 모달 창을 끌 수 있도록 하였으며, 콘텐츠 집중을 위해 뒤쪽을 흐리게 보이도록 하였습니다.
 
@@ -93,7 +93,7 @@ Sass 사용 시 BEM 컨벤션을 사용하였습니다.
 
 수정 후
 
-<img src="./images/md/key_focus.png" width="1100px">
+<img src="./images/md/key_focus.png" width="1100px" style="border: 1px solid black;">
 
 기존 배민 문방구에선 탭에 따른 아웃라인이 보이지 않습니다. 이를 수정하여 사용자의 포커스를 아웃라인으로 나타냅니다.
 
@@ -103,11 +103,11 @@ Sass 사용 시 BEM 컨벤션을 사용하였습니다.
 
 모바일
 
-<img src="./images/md/markup_m_before.png" width="575px">
+<img src="./images/md/markup_m_before.png" width="575px" style="border: 1px solid black;">
 
 데스크탑
 
-<img src="./images/md/markup_d_before.png" width = "1100px">
+<img src="./images/md/markup_d_before.png" width = "1100px" style="border: 1px solid black;">
 
 헬프미같은 경우 푸터에 있음에도 불구하고, 모바일 화면에서 중복해서 보여줍니다. 또한 로그인, 회원가입과 마이페이지가 떨어져있어 통일성이 떨어집니다.
 
