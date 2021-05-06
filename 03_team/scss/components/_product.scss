@@ -81,7 +81,8 @@
     &__sale {
         font-style: normal;
         order: -1;
-        color: $saleColor;
+        color: #E32400;
+        // #E32400
         font-weight: 700;
         font-size: rem(18);
         margin-bottom: em(10);
@@ -159,9 +160,10 @@
     left: 35%;
     width: 10%;
     height: 20px;
-    background-image: url('./../../images/like.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    cursor: pointer;
+    background: url('./../../images/icon_sprites.png') 0 0 no-repeat;
+    -webkit-background-size: 200% 100%;
+    background-size: 200% 100%;
     background-color: white;
     opacity: 0;
     transition: all 1s;
@@ -174,10 +176,11 @@
     left: 55%;
     width: 10%;
     height: 20px;
-    background-image: url('./../../images/cart.png');
-    background-size: contain;
+    cursor: pointer;
+    background: url('./../../images/icon_sprites.png') 100% 0 no-repeat;
+    -webkit-background-size: 200% 100%;
+    background-size: 200% 100%;
     background-color: white;
-    background-repeat: no-repeat;
     opacity: 0;
     transition: all 1s;
     -webkit-transition: all 1s;
@@ -277,6 +280,7 @@
 .sale__item {
     @include mobile {
         width: 48%;
+
         .product__info {
             padding-left: rem(1);
             padding-right: rem(3);

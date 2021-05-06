@@ -726,7 +726,7 @@ figure {
 .product__sale {
   font-style: normal;
   order: -1;
-  color: #FF6350;
+  color: #E32400;
   font-weight: 700;
   font-size: 1.125rem;
   margin-bottom: 0.625em;
@@ -793,9 +793,10 @@ figure {
   left: 35%;
   width: 10%;
   height: 20px;
-  background-image: url("./../../images/like.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  cursor: pointer;
+  background: url("./../../images/icon_sprites.png") 0 0 no-repeat;
+  -webkit-background-size: 200% 100%;
+  background-size: 200% 100%;
   background-color: white;
   opacity: 0;
   transition: all 1s;
@@ -808,10 +809,11 @@ figure {
   left: 55%;
   width: 10%;
   height: 20px;
-  background-image: url("./../../images/cart.png");
-  background-size: contain;
+  cursor: pointer;
+  background: url("./../../images/icon_sprites.png") 100% 0 no-repeat;
+  -webkit-background-size: 200% 100%;
+  background-size: 200% 100%;
   background-color: white;
-  background-repeat: no-repeat;
   opacity: 0;
   transition: all 1s;
   -webkit-transition: all 1s;
