@@ -4,7 +4,7 @@
     min-height: 187px;
     margin: 0 auto;
     font-size: 12px;
-    color: #717171;
+    color: #333;
     width: 100%;
     box-sizing: border-box;
 
@@ -41,7 +41,7 @@
 
     @include mobile {
         font-size: 12px;
-        color: #b5b5b5;
+        color: #333;
         font-weight: bold;
 
         .hidden {
@@ -91,7 +91,7 @@
             margin-top: em(40);
             font-size: 12px;
             line-height: 20px;
-            color: #b5b5b5;
+            color: #333;
             font-weight: bold;
         }
 

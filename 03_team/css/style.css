@@ -1009,6 +1009,7 @@ figure {
     align-items: stretch;
     flex-wrap: nowrap;
     border-bottom: 1px solid #ddd;
+    position: relative;
   }
   .header__logo {
     height: 45px;
@@ -1248,6 +1249,10 @@ figure {
   }
 }
 
+.open-menu {
+  cursor: pointer;
+}
+
 /* ---------------------------------- */
 /*           모달 애니메이션 영역 작성           */
 /* ---------------------------------- */
@@ -1286,7 +1291,7 @@ figure {
   min-height: 187px;
   margin: 0 auto;
   font-size: 12px;
-  color: #717171;
+  color: #333;
   width: 100%;
   box-sizing: border-box;
 }
@@ -1326,7 +1331,7 @@ figure {
 @media screen and (max-width: 767px) {
   .footer {
     font-size: 12px;
-    color: #b5b5b5;
+    color: #333;
     font-weight: bold;
   }
   .footer .hidden {
@@ -1365,7 +1370,7 @@ figure {
     margin-top: 2.5em;
     font-size: 12px;
     line-height: 20px;
-    color: #b5b5b5;
+    color: #333;
     font-weight: bold;
   }
   .footer__address li {
@@ -2007,6 +2012,18 @@ figure {
 
 #main {
   margin-bottom: 1.875em;
+}
+
+.login__save-saveId:focus-within {
+  outline: 3px solid #aaa;
+}
+
+:focus {
+  outline: 3px solid #aaa;
+}
+
+:focus:not(:focus-visible) {
+  outline: 0;
 }
 
 .login_wrapper {

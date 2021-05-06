@@ -2,6 +2,7 @@
 <html lang="ko-KR">
   <head>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="../js/footer.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,8 +11,20 @@
 
   <body>
     <div class="baemin">
+      <ul class="skip">
+        <li class="skip__navigation">
+          <a href="#user-list">사용자 메뉴 바로가기</a>
+        </li>
+        <li class="skip__navigation">
+          <a href="#product-list">상품 목록 바로가기</a>
+        </li>
+        <li class="skip__navigation"><a href="#main">본문 바로가기</a></li>
+        <li class="skip__navigation">
+          <a href="#footer">하단 영역 바로가기</a>
+        </li>
+      </ul>
       <header class="header">
-        <ul class="skip">
+        <ul class="skip --isTabbed">
           <li class="skip__navigation">
             <a href="#user-list">사용자 메뉴 바로가기</a>
           </li>
@@ -25,7 +38,7 @@
         </ul>
         <div class="header-inner">
           <h1 class="header__logo">
-            <a href="./index.html" class="header__logo__link"
+            <a href="../index.html" class="header__logo__link"
               ><img
                 src="../images/logo.png"
                 alt="로고 이미지"
@@ -33,11 +46,11 @@
             /></a>
           </h1>
           <button class="open-menu" aria-label="메뉴 열기"></button>
-          <div class="modal --isActivate"></div>
+          <div class="modal"></div>
           <div class="float-menu">
             <section class="nav-header">
               <h2 class="a11yHidden">사용자 로그인 창</h2>
-              <a href="#" class="nav-header__user --isLogin">
+              <a href="#" class="nav-header__user --isLogout">
                 <span class="--noUser"
                   ><strong class="emphasize"
                     ><span aria-hidden="true" class="surprized-text">앗!</span
@@ -561,10 +574,11 @@
           </div>
         </section>
       </main>
+
       <footer class="footer" id="footer">
         <h2 class="a11yHidden">배민 푸터</h2>
         <!-- footer service start -->
-        <section class="footer__service">
+        <div class="footer__service">
           <div class="footer__logo hidden">
             <img src="../images/footer_logo_new.png" alt="로고" />
           </div>
@@ -581,18 +595,20 @@
             <li><a href="">개인정보처리방침</a></li>
             <li class="hidden"><a href="">판매처 안내</a></li>
           </ul>
-        </section>
+        </div>
         <!-- footer service end -->
         <!-- footer button start -->
 
         <div class="footer__button">
-          <a href="#" role="button" id="btn1">자세히보기</a>
+          <a href="#btn1" role="button" id="btn1" class="footer__btn"
+            >자세히보기</a
+          >
         </div>
         <!-- footer button end -->
         <!-- footer__address start -->
 
         <div id="hidden_address" class="hidden">
-          <section class="footer__address">
+          <div class="footer__address">
             <address class="footer__address-info">
               <ul>
                 <li>(주)우아한형제들</li>
@@ -611,7 +627,7 @@
                 <li>호스팅제공 : 엔에이치엔고도(주)</li>
               </ul>
             </address>
-          </section>
+          </div>
           <!-- footer__address end -->
           <!-- footer__end start -->
 
@@ -622,21 +638,25 @@
             <a href="#">[서비스 가입사실 확인 ]</a>
           </p>
         </div>
-        <section class="footer__end">
+        <div class="footer__end">
           <small class="footer__end-right">
             &copy; Woowa Brothers Corp. All right Reserved
           </small>
-          <!-- <div>
-                Icons made by
-                <a href="https://www.freepik.com/" title="Freepik"> &copy; Freepik</a> from
-                <a href="https://www.flaticon.com/" title="Flaticon"></a>
-                   www.flaticon.com</a
-                >
-              </div> -->
-        </section>
+          <div>
+            Icons made by
+            <a href="https://www.freepik.com/" title="Freepik">
+              &copy; Freepik</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </div>
+        </div>
         <!-- footer__end end -->
       </footer>
       <!-- footer 끝 -->
     </div>
+    <script src="./js/header.js"></script>
   </body>
 </html>
