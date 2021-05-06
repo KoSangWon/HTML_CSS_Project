@@ -46,11 +46,11 @@
             /></a>
           </h1>
           <button class="open-menu" aria-label="메뉴 열기"></button>
-          <div class="modal"></div>
+          <div class="modal --isActivate"></div>
           <div class="float-menu">
             <section class="nav-header">
               <h2 class="a11yHidden">사용자 로그인 창</h2>
-              <a href="#" class="nav-header__user --isLogout">
+              <a href="#" class="nav-header__user --isLogin">
                 <span class="--noUser"
                   ><strong class="emphasize"
                     ><span aria-hidden="true" class="surprized-text">앗!</span
@@ -263,10 +263,10 @@
                       </div>
                       <em class="product__sale">10%</em>
                     </a>
-                    <div class="like">
+                    <div class="like" role="button">
                       <span class="a11yHidden">찜</span>
                     </div>
-                    <div class="cart">
+                    <div class="cart" role="button">
                       <span class="a11yHidden">장바구니</span>
                     </div>
                   </div>
@@ -589,11 +589,11 @@
             <li>배민문방구 인스타그램 @baemin_store</li>
           </ul>
           <ul class="footer__service-link">
-            <li><a href="">공지사항</a></li>
-            <li><a href="">1:1 문의</a></li>
-            <li><a href="">이용약관</a></li>
-            <li><a href="">개인정보처리방침</a></li>
-            <li class="hidden"><a href="">판매처 안내</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">1:1 문의</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li class="hidden"><a href="#">판매처 안내</a></li>
           </ul>
         </div>
         <!-- footer service end -->
@@ -657,6 +657,5 @@
       </footer>
       <!-- footer 끝 -->
     </div>
-    <script src="./js/header.js"></script>
   </body>
 </html>
