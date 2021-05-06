@@ -80,11 +80,11 @@ Sass 사용 시 BEM 컨벤션을 사용하였습니다.
 
 수정 전
 
-<img src="./images/md/close_before.png" width="767px">
+<img src="./images/md/close_before.png" width="575px">
 
 수정 후
 
-<img src="./images/md/close_after.png" width="767px">
+<img src="./images/md/close_after.png" width="575px">
 
 키보드로도 모달 창을 끌 수 있도록 하였으며, 콘텐츠 집중을 위해 뒤쪽을 흐리게 보이도록 하였습니다.
 
@@ -102,12 +102,12 @@ Sass 사용 시 BEM 컨벤션을 사용하였습니다.
 수정 전
 
 모바일
-<img src="./images/md/markup_m_before.png" width="767px">
+<img src="./images/md/markup_m_before.png" width="575px">
 
 데스크탑
 ![markup_d_before](./images/md/markup_d_before.png)
 
-<img >
+<img src="./images/md/markup_d_before.png" width = "1100px">
 
 헬프미같은 경우 마크업 상 푸터에 있음에도 불구하고, 모바일 화면에서 중복해서 보여줍니다. 또한 로그인, 회원가입과 마이페이지가 떨어져있는 것을 볼 수 있습니다.
 
