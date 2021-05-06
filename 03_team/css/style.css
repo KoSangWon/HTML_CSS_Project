@@ -467,6 +467,52 @@ template {
   display: none;
 }
 
+/**
+ * Copyright (c) 2015 Spoqa, Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Spoqa Han Sans Bold"), url("../fonts/SpoqaHanSansBold.woff2") format("woff2"), url("../fonts/SpoqaHanSans/SpoqaHanSansBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Spoqa Han Sans Regular"), url("../fonts/SpoqaHanSansRegular.woff2") format("woff2"), url("../fonts/SpoqaHanSansRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Spoqa Han Sans Light"), url("../fonts/SpoqaHanSansLight.woff2") format("woff2"), url("../fonts/SpoqaHanSansLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Spoqa Han Sans";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Spoqa Han Sans Thin"), url("../fonts/SpoqaHanSansThin.woff2") format("woff2"), url("../fonts/SpoqaHanSansThin.woff") format("woff");
+}
 .a11yHidden {
   overflow: hidden;
   position: absolute !important;
@@ -512,6 +558,11 @@ a {
   text-decoration: none;
 }
 
+/* -------------- 폰트 적용 ------------- */
+body {
+  font-family: "Spoqa Han Sans", "sans-serif";
+}
+
 figure {
   margin: 0;
 }
@@ -521,6 +572,10 @@ figure {
   height: auto;
 }
 
+/* --- span 태그의 기본 레이아웃 --- */
+/* ----- 체크박스 옆 텍스트 속성 ---- */
+/* ---- 체크박스 input요소가 위에 덮어져야 한다. --- */
+/* ---- 체크박스가 체크되었을 때 span요소의 변화 ---- */
 /* 상품 section 최상위 컨테이너 */
 .products {
   padding: 0 20px;
@@ -838,12 +893,337 @@ figure {
   margin-top: auto;
 }
 
+/* ---------------------------------- */
+/*              헤더 영역 작성              */
+/* ---------------------------------- */
 .header {
-  position: sticky;
+  position: fixed;
+  left: 0;
   top: 0;
+  width: 100%;
   z-index: 1000;
-  min-height: 100px;
-  background-color: aqua;
+  background-color: white;
+  /* ------------ 헤더 영역(모바일) ----------- */
+  /* ----------- 헤더 영역 데스크탑 ----------- */
+}
+.nav-header {
+  background-color: white;
+}
+
+.nav-header__user {
+  display: inline-block;
+  padding: 1.5625em;
+}
+.emphasize {
+  font-size: 1.5625rem;
+}
+
+.surprized-text {
+  display: block;
+}
+
+.name {
+  display: block;
+  font-size: 1.25rem;
+  padding-bottom: 0.1875em;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    /* -------------- 로고 영역 (모바일) ------------- */
+    /* ------------- 메뉴 열기 (모바일) ------------- */
+    /* -------- 모달 네비게이션 기본 레이아웃 (모바일) -------- */
+    /* --- 로그인, 로그아웃 상태에 따라 모달 문구가 다르다 (모바일) -- */
+    /* ---------- 모달 네비게이션 활성화 (모바일) ---------- */
+    /* --------- 주요 네비게이션 (모바일) --------- */
+  }
+  .header + .main {
+    margin-top: 2.8125em;
+  }
+  .--isTabbed ~ .main {
+    margin-top: 10.3125em;
+  }
+
+  .header-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #ddd;
+  }
+  .header__logo {
+    height: 45px;
+  }
+  .header__logo__link {
+    display: inline-block;
+  }
+  .header__img__image {
+    max-width: 102px;
+  }
+  .open-menu {
+    padding: 0;
+    margin: 0;
+    height: 45px;
+    width: 45px;
+    background: url(../images/nav-icon@3x.png) white 50% no-repeat;
+    background-size: 60% 60%;
+    border: none;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+    /* --------- 모달 종료 버튼 (모바일) --------- */
+  }
+  .modal__exit {
+    position: absolute;
+    right: 0.0625em;
+    top: 0.625em;
+    border: none;
+    width: 1.25em;
+    height: 1.25em;
+    font-size: 1.875rem;
+    color: #171717;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .float-menu {
+    position: fixed;
+    top: 0;
+    left: 25%;
+    right: 0;
+    bottom: 0;
+    background: #f3f3f3;
+    z-index: 10;
+    overflow-y: scroll;
+    transform: translateX(100vw);
+    transition: transform 1.2s;
+  }
+
+  .--noUser, .--User {
+    display: none;
+  }
+
+  .--isLogin .--User {
+    display: block;
+  }
+
+  .--isLogout .--noUser {
+    display: block;
+  }
+
+  .modal.--isActivate {
+    display: block;
+    animation: modal-appear 0.8s;
+  }
+  .modal.--isActivate + .float-menu {
+    display: block;
+    transform: none;
+  }
+
+  .header__member-wrapper {
+    background-color: white;
+  }
+  .header__member-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .header__member-item {
+    text-align: center;
+  }
+  .header__member-item img {
+    width: 30px;
+    height: 30px;
+  }
+  .header__member-link {
+    display: inline-block;
+    padding: 0.625em;
+    margin: 0.375em;
+  }
+  .header__member-item span {
+    display: block;
+    text-align: center;
+    margin-top: 0.4375em;
+  }
+  .navigation {
+    margin-top: 0.625em;
+  }
+  .navigation__category {
+    padding: 0.625em 1.5625em;
+    background-color: white;
+  }
+  .navigation__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  .navigation__title, .navigation__category-item a {
+    display: block;
+    padding: 0.875em 0;
+    margin: 0.9375em 0;
+  }
+  .navigation__category-item a {
+    border-bottom: 1px solid #ececec;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    /* ---------- 데스크탑 없애 버릴 요소 --------- */
+    /* ---------- 헤더 영역 데스크탑 배치 --------- */
+    /* -------- 홈페이지 스크롤시 헤더 레이아웃 ------- */
+  }
+  .header + .main {
+    margin-top: 9.9375em;
+  }
+  .--isScrolled ~ .main {
+    margin-top: 6.25em;
+  }
+
+  .--isTabbed ~ .main {
+    margin-top: 17.4375em;
+  }
+
+  .header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .header__member-list img {
+    display: none;
+  }
+  .open-menu,
+.modal__exit,
+.nav-header__user {
+    display: none;
+  }
+
+  .navigation__title {
+    display: none;
+  }
+
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    top: 2.1875em;
+    transform: translateX(-50%);
+  }
+  .header__logo__link {
+    display: inline-block;
+  }
+  .header__img__image {
+    width: 156px;
+  }
+  .header__member-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    padding-bottom: 6.25em;
+    font-size: 0.875rem;
+  }
+  .header__member-item {
+    box-sizing: border-box;
+  }
+  .header__member-item:nth-child(-n+3)::after {
+    content: "";
+    font-size: 0.1875rem;
+    position: relative;
+    top: -1.5px;
+    border-left: 1px solid #ddd;
+    margin: 0 2.5em;
+  }
+  .header__member-item:last-child {
+    margin-right: 0.625em;
+  }
+  .header__member-link {
+    display: inline-block;
+    padding: 0.625em;
+  }
+  .navigation__category-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  .navigation__category-item a {
+    display: block;
+    padding: 0.625em;
+    margin: 0 0.375em;
+  }
+
+  .--isScrolled .header__logo {
+    top: 0.3125em;
+  }
+  .--isScrolled .header__img__image {
+    width: 86px;
+  }
+  .--isScrolled .header__member-list {
+    padding: 0.625em 0;
+  }
+  .--isScrolled .header__member-wrapper::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid #eaeaea;
+  }
+  .--isScrolled .navigation__category-list {
+    padding: 0.3125em 0;
+  }
+}
+
+/* ---------------------------------- */
+/*           모달 애니메이션 영역 작성           */
+/* ---------------------------------- */
+@keyframes modal-appear {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ---------------------------------- */
+/*           본문 내용 바로 가기 적용           */
+/* ---------------------------------- */
+.skip {
+  display: none;
+}
+
+.--isTabbed ~ .header {
+  margin-top: 7.5em;
+}
+.--isTabbed {
+  display: block;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  z-index: 1100;
+  background-color: white;
+}
+.--isTabbed a {
+  display: block;
+  border: 1px solid #ddd;
+  padding: 0.3125em 0;
 }
 
 .footer {
