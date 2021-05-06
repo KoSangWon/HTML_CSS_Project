@@ -76,7 +76,7 @@
         }
 
         input[type='checkbox']:checked+label::before {
-            background: url(../../images/checkbox_white@3x.png) no-repeat center;
+            background: url(../images/checkbox_white@3x.png) no-repeat center;
             background-size: em(12) em(9);
             background-color: #717171;
         }
@@ -122,7 +122,7 @@
             left: -2.75em;
             display: inline-block;
             position: absolute;
-            background: url(../../images/pc_facebook_join@3x.png) no-repeat 50% 50%;
+            background: url(../images/pc_facebook_join@3x.png) no-repeat 50% 50%;
             background-size: em(40);
             width: 38px;
             height: 30px;
