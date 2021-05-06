@@ -58,7 +58,7 @@ Sass 사용 시 BEM 컨벤션을 사용하였습니다.
 
 수정 전
 
-<img src="./images/md/skip_nav_before.png" width="1100px">
+<img src="./images/md/skip_nav_before.png" width="1100px" style="border: 1px solid black;">
 
 수정 후
 
@@ -102,17 +102,26 @@ Sass 사용 시 BEM 컨벤션을 사용하였습니다.
 수정 전
 
 모바일
+
 <img src="./images/md/markup_m_before.png" width="575px">
 
 데스크탑
-![markup_d_before](./images/md/markup_d_before.png)
 
 <img src="./images/md/markup_d_before.png" width = "1100px">
 
-헬프미같은 경우 마크업 상 푸터에 있음에도 불구하고, 모바일 화면에서 중복해서 보여줍니다. 또한 로그인, 회원가입과 마이페이지가 떨어져있는 것을 볼 수 있습니다.
+헬프미같은 경우 푸터에 있음에도 불구하고, 모바일 화면에서 중복해서 보여줍니다. 또한 로그인, 회원가입과 마이페이지가 떨어져있어 통일성이 떨어집니다.
 
 수정 후
 
+모바일
+
+<img src="./images/md/markup_m_after.png" width = "575px">
+
+데스크탑 
+
+<img src="./images/md/markup_d_after.png" width = "1100px">
+
+모바일과 데스크탑 모두 사용자 메뉴가 먼저오고 그 다음에 상품 목록이 등장합니다.
 
 ### 홈페이지 메인
 
