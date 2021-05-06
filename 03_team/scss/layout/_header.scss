@@ -59,6 +59,7 @@
         &-inner{
             @include flexbox($justify-content:space-between);
             border-bottom: 1px solid #ddd;
+            position: relative;
         }
 
         /* -------------- 로고 영역 (모바일) ------------- */
@@ -390,6 +391,9 @@
     
 }
 
+.open-menu {
+    cursor: pointer;
+}
 
 /* ---------------------------------- */
 /*           모달 애니메이션 영역 작성           */
