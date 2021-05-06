@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>배민문방구 로그인</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/footer.js"></script>
   </head>
 
   <body>
@@ -145,7 +146,7 @@
                     name="userPw"
                     required
                   />
-                  <label for="userPW"></label>
+                  <label for="userPw"></label>
                 </div>
                 <div class="login__save">
                   <div class="login__save-saveLogin hidden">
@@ -232,7 +233,7 @@
       <footer id="footer" class="footer">
         <h2 class="a11yHidden">배민 푸터</h2>
         <!-- footer service start -->
-        <section class="footer__service">
+        <div class="footer__service">
           <div class="footer__logo hidden">
             <img src="../images/footer_logo_new.png" alt="로고" />
           </div>
@@ -249,18 +250,20 @@
             <li><a href="">개인정보처리방침</a></li>
             <li class="hidden"><a href="">판매처 안내</a></li>
           </ul>
-        </section>
+        </div>
         <!-- footer service end -->
         <!-- footer button start -->
 
         <div class="footer__button">
-          <a href="#" role="button" id="btn1" class="footer__btn">자세히보기</a>
+          <a href="#btn1" role="button" id="btn1" class="footer__btn"
+            >자세히보기</a
+          >
         </div>
         <!-- footer button end -->
         <!-- footer__address start -->
 
         <div id="hidden_address" class="hidden">
-          <section class="footer__address">
+          <div class="footer__address">
             <address class="footer__address-info">
               <ul>
                 <li>(주)우아한형제들</li>
@@ -279,7 +282,7 @@
                 <li>호스팅제공 : 엔에이치엔고도(주)</li>
               </ul>
             </address>
-          </section>
+          </div>
           <!-- footer__address end -->
           <!-- footer__end start -->
 
@@ -290,18 +293,21 @@
             <a href="#">[서비스 가입사실 확인 ]</a>
           </p>
         </div>
-        <section class="footer__end">
+        <div class="footer__end">
           <small class="footer__end-right">
             &copy; Woowa Brothers Corp. All right Reserved
           </small>
-          <!-- <div>
-              Icons made by
-              <a href="https://www.freepik.com/" title="Freepik"> &copy; Freepik</a> from
-              <a href="https://www.flaticon.com/" title="Flaticon"></a>
-                 www.flaticon.com</a
-              >
-            </div> -->
-        </section>
+          <div>
+            Icons made by
+            <a href="https://www.freepik.com/" title="Freepik">
+              &copy; Freepik</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </div>
+        </div>
         <!-- footer__end end -->
       </footer>
       <!-- footer 끝 -->
