@@ -1595,26 +1595,21 @@ figure {
 .goods-view__price-box {
   margin-bottom: 1.25em;
 }
-@media screen and (min-width: 768px) {
-  .goods-view__price-box {
-    max-width: 450px;
-  }
-}
 .goods-view__discount-rate {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #ff6350;
+  color: #E32400;
 }
 .goods-view__prices-original {
   font-size: 0.75rem;
-  color: #999999;
+  color: #333;
 }
 .goods-view__prices-current {
   font-weight: 700;
 }
 .goods-view__prices-current strong {
   font-size: 1.75rem;
-  color: #29c1bc;
+  color: #290002;
 }
 .goods-view__prices {
   float: right;
