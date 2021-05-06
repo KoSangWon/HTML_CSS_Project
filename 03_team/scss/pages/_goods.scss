@@ -23,22 +23,18 @@
 
   &__price-box {
     margin-bottom: em(20);
-
-    @include desktop {
-      max-width: 450px;
-    }
   }
 
   &__discount-rate {
     font-size: rem(28);
     font-weight: 700;
-    color: #ff6350;
+    color: #E32400;;
   }
 
   &__prices {
     &-original {
       font-size: rem(12);
-      color: #999999;
+      color: #333;
     }
 
     &-current {
@@ -46,7 +42,7 @@
 
       strong {
         font-size: rem(28);
-        color: #29c1bc;
+        color: #290002;
       }
     }
   }
