@@ -11,7 +11,85 @@
 
 <body>
     <div class="baemin">
-        <header class="header"></header>
+        <ul class="skip --isTabbed">
+            <li class="skip__navigation"><a href="#user-list">사용자 메뉴 바로가기</a></li>
+            <li class="skip__navigation"><a href="#product-list">상품 목록 바로가기</a></li>
+            <li class="skip__navigation"><a href="#main">본문 바로가기</a></li>
+            <li class="skip__navigation"><a href="#footer">하단 영역 바로가기</a></li>
+        </ul>
+        <header class="header">
+            <div class="header-inner">
+                <h1 class="header__logo">
+                    <a href="#" class="header__logo__link"><img src="../images/logo.png" alt="로고 이미지"
+                            class="header__img__image" /></a>
+                </h1>
+                <button class="open-menu" aria-label="메뉴 열기">
+                </button>
+                <div class="modal --isActivate">
+                </div>
+                <div class="float-menu">
+                    <section class="nav-header">
+                        <h2 class="a11yHidden">사용자 로그인 창</h2>
+                        <a href="#" class="nav-header__user --isLogin">
+                            <span class="--noUser"><strong class="emphasize"><span aria-hidden="true"
+                                        class="surprized-text">앗!</span>로그인</strong>이 필요해요<span
+                                    aria-hidden="true">&#62;</span></span>
+                            <span class="--User">
+                                <span class="name">윤다은님<span aria-hidden="true">&#62;</span></span>
+                                <strong class="emphasize">나이스 투 미츄&#33;</strong></span>
+                        </a>
+                    </section>
+                    <section class="header__member">
+                        <h2 class="a11yHidden">사용자 메뉴 영역</h2>
+                        <div class="header__member-wrapper">
+                            <ul class="header__member-list" id="user-list">
+                                <li class="header__member-item">
+                                    <a class="header__member-link" href="#">
+                                        <img src="../images/add-user.svg" alt="" />
+                                        <span>회원가입</span>
+                                    </a>
+                                </li>
+                                <li class="header__member-item">
+                                    <a href="#" class="header__member-link">
+                                        <img src="../images/login.svg" alt="" />
+                                        <span>로그인</span>
+                                    </a>
+                                </li>
+                                <li class="header__member-item">
+                                    <a href="#" class="header__member-link">
+                                        <img src="../images/mypage.svg" alt="" />
+                                        <span>마이페이지</span>
+                                    </a>
+                                </li>
+                                <li class="header__member-item">
+                                    <a href="#" class="header__member-link">
+                                        <img src="../images/cart.svg" alt="" />
+                                        <span>장바구니</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <nav class="navigation">
+                        <div class="navigation__category">
+                            <span class="navigation__title">카테고리</span>
+                            <ul class="navigation__category-list" id="product-list">
+                                <li class="navigation__category-item"><a href="#"><span>전체</span></a></li>
+                                <li class="navigation__category-item"><a href="#"><span>문구</span></a></li>
+                                <li class="navigation__category-item"><a href="#"><span>리빙</span></a></li>
+                                <li class="navigation__category-item"><a href="#"><span>책</span></a></li>
+                                <li class="navigation__category-item"><a href="#"><span>을지로에디션</span></a></li>
+                                <li class="navigation__category-item"><a href="#"><span>ㅋㅋ에디션</span></a></li>
+                                <li class="navigation__category-item"><a href="#"><span>배달이친구들</span></a></li>
+                                <li class="navigation__category-item"><a href="#"><span>선물세트</span></a></li>
+                                <li class="navigation__category-item"><a href="#"><span>콜라보레이션</span></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <button class="modal__exit" aria-label="메뉴 닫기">&#215;</button>
+                </div>
+            </div>
+        </header>
         <main class="main">
             <h1 class="a11yHidden">상품</h1>
             <section class="banner">
