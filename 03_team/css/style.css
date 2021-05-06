@@ -913,21 +913,26 @@ figure {
   background-color: #E2E2E2;
   position: relative;
   width: 100%;
+  padding-top: 0.125em;
 }
 .banner__item:nth-child(1) {
   animation: opa1 9s infinite linear;
 }
 .banner__item:nth-child(2) {
   position: absolute;
-  top: 0;
+  top: 0.125em;
   left: 0;
   animation: opa2 9s infinite linear;
 }
 .banner__item:nth-child(3) {
   position: absolute;
-  top: 0;
+  top: 0.125em;
   left: 0;
   animation: opa3 9s infinite linear;
+}
+
+.is--top {
+  z-index: 100;
 }
 
 /*# sourceMappingURL=style.css.map */
