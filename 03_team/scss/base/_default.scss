@@ -38,3 +38,8 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+// figure 요소 마진 제거
+figure {
+    margin: 0;
+}
