@@ -199,7 +199,7 @@
 /* 추천 선물 이미지 */
 .pick__item-img {
     &__first {
-        background: url('./../../images/pick_sprites.png') 0 0 no-repeat;
+        background: url('../images/pick_sprites.png') 0 0 no-repeat;
         -webkit-background-size: 200% 100%;
         background-size: 200% 100%;
 
@@ -215,7 +215,7 @@
     }
 
     &__second {
-        background: url('./../../images/pick_sprites.png') 100% 0 no-repeat;
+        background: url('../images/pick_sprites.png') 100% 0 no-repeat;
         -webkit-background-size: 200% 100%;
         background-size: 200% 100%;
 
