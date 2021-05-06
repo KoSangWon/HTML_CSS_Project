@@ -4,16 +4,23 @@
 }
 
 // 요소 박스의 크기 고정
-@mixin boxFixed($width: 767px, $paddingX: 0){
+@mixin boxFixed($width: 767px, $paddingX: 0) {
     width: $width;
     padding-left: $paddingX;
     padding-right: $paddingX;
     @include autoMargin();
     @content;
-  }
+}
 
 // 반응형 이미지
 @mixin responsiveImg {
     max-width: 100%;
     height: auto;
+}
+
+// 상품 상세 설명 이미지 설정
+@mixin goodsImg {
+    display: block;
+    width: 100%;
+    margin-top: em(20);
 }

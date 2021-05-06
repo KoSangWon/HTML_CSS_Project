@@ -10,22 +10,22 @@
 
   <body>
     <div class="baemin">
-      <ul class="skip --isTabbed">
-        <li class="skip__navigation">
-          <a href="#user-list">사용자 메뉴 바로가기</a>
-        </li>
-        <li class="skip__navigation">
-          <a href="#product-list">상품 목록 바로가기</a>
-        </li>
-        <li class="skip__navigation"><a href="#main">본문 바로가기</a></li>
-        <li class="skip__navigation">
-          <a href="#footer">하단 영역 바로가기</a>
-        </li>
-      </ul>
       <header class="header">
+        <ul class="skip">
+          <li class="skip__navigation">
+            <a href="#user-list">사용자 메뉴 바로가기</a>
+          </li>
+          <li class="skip__navigation">
+            <a href="#product-list">상품 목록 바로가기</a>
+          </li>
+          <li class="skip__navigation"><a href="#main">본문 바로가기</a></li>
+          <li class="skip__navigation">
+            <a href="#footer">하단 영역 바로가기</a>
+          </li>
+        </ul>
         <div class="header-inner">
           <h1 class="header__logo">
-            <a href="#" class="header__logo__link"
+            <a href="./index.html" class="header__logo__link"
               ><img
                 src="../images/logo.png"
                 alt="로고 이미지"
@@ -63,7 +63,7 @@
                     </a>
                   </li>
                   <li class="header__member-item">
-                    <a href="#" class="header__member-link">
+                    <a href="./views/login.html" class="header__member-link">
                       <img src="../images/login.svg" alt="" />
                       <span>로그인</span>
                     </a>
@@ -160,7 +160,7 @@
               <h3 class="products__best-heading">잘나가요</h3>
               <ul class="products__list best__list">
                 <li class="products__item best__item">
-                  <a href="#">
+                  <a href="./views/goods.html">
                     <img
                       class="responsiveImg"
                       src="./images/best1.png"
@@ -168,7 +168,7 @@
                     />
                   </a>
                   <div class="product">
-                    <a class="product__info" href="#">
+                    <a class="product__info" href="./views/goods.html">
                       <h4 class="product__name">ㅋㅋ골고루 양말 세트</h4>
                       <span class="product__price">22,000원</span>
                       <del class="product__price-origin">27,500원</del>
@@ -561,7 +561,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer" id="footer">
         <h2 class="a11yHidden">배민 푸터</h2>
         <!-- footer service start -->
         <section class="footer__service">

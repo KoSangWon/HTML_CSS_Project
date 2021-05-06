@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <div class="baemin">
+    <!-- 헤더 -->
+    <header class="header">
+      <ul class="skip">
+        <li class="skip__navigation"><a href="#user-list">사용자 메뉴 바로가기</a></li>
+        <li class="skip__navigation"><a href="#product-list">상품 목록 바로가기</a></li>
+        <li class="skip__navigation"><a href="#main">본문 바로가기</a></li>
+        <li class="skip__navigation"><a href="#footer">하단 영역 바로가기</a></li>
+      </ul>
+      <div class="header-inner">
+        <h1 class="header__logo">
+          <a href="../index.html" class="header__logo__link"><img src="../images/logo.png" alt="로고 이미지"
+              class="header__img__image" /></a>
+        </h1>
+        <button class="open-menu" aria-label="메뉴 열기">
+        </button>
+        <div class="modal --isActivate">
+        </div>
+        <div class="float-menu">
+          <section class="nav-header">
+            <h2 class="a11yHidden">사용자 로그인 창</h2>
+            <a href="#" class="nav-header__user --isLogin">
+              <span class="--noUser"><strong class="emphasize"><span aria-hidden="true"
+                    class="surprized-text">앗!</span>로그인</strong>이 필요해요<span aria-hidden="true">&#62;</span></span>
+              <span class="--User">
+                <span class="name">윤다은님<span aria-hidden="true">&#62;</span></span>
+                <strong class="emphasize">나이스 투 미츄&#33;</strong></span>
+            </a>
+          </section>
+          <section class="header__member">
+            <h2 class="a11yHidden">사용자 메뉴 영역</h2>
+            <div class="header__member-wrapper">
+              <ul class="header__member-list" id="user-list">
+                <li class="header__member-item">
+                  <a class="header__member-link" href="#">
+                    <img src="../images/add-user.svg" alt="" />
+                    <span>회원가입</span>
+                  </a>
+                </li>
+                <li class="header__member-item">
+                  <a href="./login.html" class="header__member-link">
+                    <img src="../images/login.svg" alt="" />
+                    <span>로그인</span>
+                  </a>
+                </li>
+                <li class="header__member-item">
+                  <a href="#" class="header__member-link">
+                    <img src="../images/mypage.svg" alt="" />
+                    <span>마이페이지</span>
+                  </a>
+                </li>
+                <li class="header__member-item">
+                  <a href="#" class="header__member-link">
+                    <img src="../images/cart.svg" alt="" />
+                    <span>장바구니</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <nav class="navigation">
+            <div class="navigation__category">
+              <span class="navigation__title">카테고리</span>
+              <ul class="navigation__category-list" id="product-list">
+                <li class="navigation__category-item"><a href="#"><span>전체</span></a></li>
+                <li class="navigation__category-item"><a href="#"><span>문구</span></a></li>
+                <li class="navigation__category-item"><a href="#"><span>리빙</span></a></li>
+                <li class="navigation__category-item"><a href="#"><span>책</span></a></li>
+                <li class="navigation__category-item"><a href="#"><span>을지로에디션</span></a></li>
+                <li class="navigation__category-item"><a href="#"><span>ㅋㅋ에디션</span></a></li>
+                <li class="navigation__category-item"><a href="#"><span>배달이친구들</span></a></li>
+                <li class="navigation__category-item"><a href="#"><span>선물세트</span></a></li>
+                <li class="navigation__category-item"><a href="#"><span>콜라보레이션</span></a></li>
+              </ul>
+            </div>
+          </nav>
+          <button class="modal__exit" aria-label="메뉴 닫기">&#215;</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main" id="main">
+      <!-- 상단의 설명 및 이미지 -->
+      <section class="goods-view">
+        <div class="goods-view__info-box">
+          <!-- 상품 이름 -->
+          <h2 class="goods-view__heading">효자손. 혼자서도 잘해요</h2>
+          <!-- 상품 가격 박스-->
+          <div class="goods-view__price-box">
+            <!-- 할인 퍼센트 -->
+            <span class="goods-view__discount-rate">20%</span>
+            <!-- 원래 가격 및 현재가격 -->
+            <div class="goods-view__prices">
+              <span class="goods-view__prices-original">
+                <del>12,900</del>원
+              </span>
+              <span class="goods-view__prices-current">
+                <strong>10,320</strong>원
+              </span>
+            </div>
+          </div>
+          <!-- 상품 정보 -->
+          <dl class="goods-view__sub-info">
+            <dt class="goods-view__sub-info-key">
+              배송정보
+            </dt>
+            <dd class="goods-view__sub-info-value">
+              2,500원(3만원 이상 구매 시 무료배송)<br />
+              오후 2시 당일배송마감
+            </dd>
+          </dl>
+          <!-- 버튼 그룹 -->
+          <ul class="goods-view__btn-box">
+            <li>
+              <button type="button" class="goods-view__btn goods-view__btn-share">
+                공유하기
+              </button>
+            </li>
+            <li>
+              <button type="button" class="goods-view__btn goods-view__btn-heart">
+                찜하기
+              </button>
+            </li>
+          </ul>
+          <!-- 구매하기  -->
+          <div class="goods-view__order-box">
+            <div class="goods-view__options">
+              <span class="goods-view__prdt-name">효자손. 혼자서도 잘해요</span>
+              <span class="goods-view__order-cnt">
+                <button type="button" class="btn-down" title="감소"></button>
+                <input type="number" title="수량" value="1" readonly />
+                <button type="button" class="btn-up" title="증가"></button>
+              </span>
+              <span class="goods-view__order-price">
+                <strong>10,320</strong>원
+              </span>
+            </div>
+            <dl class="goods-view__total">
+              <dt>총 합계금액</dt>
+              <dd>10,320원</dd>
+            </dl>
+            <ul class="goods-view__order-box-links">
+              <li>
+                <a href="#" class="goods-view__cart-link">장바구니 담기</a>
+              </li>
+              <li>
+                <a href="#" class="goods-view__order-link">바로구매</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 이미지 -->
+        <div class="goods-view__image-box">
+          <img src="../images/goods/goods_img.jpg" alt="효자손. 혼자서도 잘해요" class="goods-img" />
+        </div>
+      </section>
+
+      <!-- 탭 -->
+      <ul class="tab-list" role="tablist" aria-label="상품 정보, 후기, 문의 탭 메뉴">
+        <li role="none">
+          <a href="#detailInfo" role="tab" aria-selected="true" aria-controls="detailInfo" id="tab1">상세정보</a>
+        </li>
+        <li role="none">
+          <a href="#basicInfo" role="tab" aria-selected="false" aria-controls="basicInfo" id="tab2">기본정보</a>
+        </li>
+        <li role="none">
+          <a href="#review" role="tab" aria-selected="false" aria-controls="review" id="tab3">상품후기</a>
+        </li>
+        <li role="none">
+          <a href="#question" role="tab" aria-selected="false" aria-controls="question" id="tab4">상품문의</a>
+        </li>
+      </ul>
+
+      <section id="detailInfo" class="goods__detail-info" role="tabpanel">
+        <h3 class="goods__detail-info-heading">상세정보</h3>
+
+        <div class="ifream-wrapper">
+          <iframe src="https://www.youtube.com/embed/1dqWk7hlDKE" title="유튜브 배달의 민족 효자손 영상"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <img src="../images/goods/goods_born.jpg" alt="배민문방구 효자손은 마음을 담아 제작하였습니다." class="goods__detail-info-born" />
+        <img src="../images/goods/goods_make.jpg" alt="효자손이 재탄생하였습니다." class="goods__detail-info-new-make" />
+        <img src="../images/goods/goods_etc.jpg" alt="배민 효자손의 쓸데없는 설명입니다." class="goods__detail-info-etc" />
+
+        <details open class="goods__details">
+          <summary>상품필수 정보</summary>
+          <dl class="goods__details-list">
+            <dt>종류</dt>
+            <dd>효자손</dd>
+            <dt>소재</dt>
+            <dd>플라스틱</dd>
+            <dt>치수</dt>
+            <dd>26 &times; 425.5mm / 5mm</dd>
+            <dt>제조사</dt>
+            <dd>(주)우아한형제들</dd>
+            <dt>제조국</dt>
+            <dd>한국</dd>
+            <dt>품질보증기준</dt>
+            <dd>관련 법 및 소비자분쟁해결 규정에 따름</dd>
+            <dt>AS 책임자와 전화번호</dt>
+            <dd>배민문방구 고객센터 1670-9902</dd>
+          </dl>
+        </details>
+
+      </section>
+      <section hidden id="basicInfo" class="goods__basic-info" role="tabpanel">
+        <h3 class="goods__basic-info-heading">기본정보</h3>
+      </section>
+      <section hidden id="review" class="goods__review" role="tabpanel">
+        <h3 class="goods__review-heading">상품후기</h3>
+
+        <ul class="goods__user-review">
+          <li>
+            <dl class="goods__review-info">
+              <dt class="goods__review-info-key">만족도</dt>
+              <dd class="goods__review-info-score">매우 만족</dd>
+              <dt class="goods__review-info-key">작성자</dt>
+              <dd class="goods__review-info-author">손오공</dd>
+              <dt class="goods__review-info-key">작성일</dt>
+              <dd class="goods__review-info-date">
+                <time datetime="2021-05-03">2021.05.03</time>
+              </dd>
+              <dt class="goods__review-info-key">작성 내용</dt>
+              <dd class="goods__review-info-content">
+                <details>
+                  <summary>ㅋㅋㅋ 원래 고급스러운 맛으로 쓰려한거니까</summary>
+                  <img src="../images/goods/review-img.jpg" alt="" />
+                  <p>애플 디자인 패키지 같아 고급스럽고 재밌네요</p>
+                </details>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="goods__review-info">
+              <dt class="goods__review-info-key">만족도</dt>
+              <dd class="goods__review-info-score">만족</dd>
+              <dt class="goods__review-info-key">작성자</dt>
+              <dd class="goods__review-info-author">저팔계</dd>
+              <dt class="goods__review-info-key">작성일</dt>
+              <dd class="goods__review-info-date">
+                <time datetime="2021-05-03">2021.05.03</time>
+              </dd>
+              <dt class="goods__review-info-key">작성 내용</dt>
+              <dd class="goods__review-info-content">
+                <details>
+                  <summary>ㅋㅋㅋ 원래 고급스러운 맛으로 쓰려한거니까</summary>
+                  <img src="../images/goods/review-img.jpg" alt="" />
+                  <p>애플 디자인 패키지 같아 고급스럽고 재밌네요</p>
+                </details>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="goods__review-info">
+              <dt class="goods__review-info-key">만족도</dt>
+              <dd class="goods__review-info-score">매우 불만족</dd>
+              <dt class="goods__review-info-key">작성자</dt>
+              <dd class="goods__review-info-author">사오정</dd>
+              <dt class="goods__review-info-key">작성일</dt>
+              <dd class="goods__review-info-date">
+                <time datetime="2021-05-03">2021.05.03</time>
+              </dd>
+              <dt class="goods__review-info-key">작성 내용</dt>
+              <dd class="goods__review-info-content">
+                <details>
+                  <summary>ㅋㅋㅋ 원래 고급스러운 맛으로 쓰려한거니까</summary>
+                  <img src="../images/goods/review-img.jpg" alt="" />
+                  <p>애플 디자인 패키지 같아 고급스럽고 재밌네요</p>
+                </details>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+
+        <a hidden href="#" class="goods__write-review">후기작성</a>
+      </section>
+      <section hidden id="question" class="goods__question" role="tabpanel">
+        <h3 class="goods__question-heading">상품문의</h3>
+      </section>
+
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer" id="footer">
+      <h2 class="a11yHidden">배민 푸터</h2>
+      <!-- footer service start -->
+      <section class="footer__service">
+        <div class="footer__logo hidden">
+          <img src="../images/footer_logo_new.png" alt="로고" />
+        </div>
+        <ul class="footer__service-center">
+          <li class="footer__service-center1">배민문방구 고객센터</li>
+          <li class="footer__service-center2">1670-9902</li>
+          <li>월-금 13:00~18:00 / 주말・공휴일 휴무</li>
+          <li>배민문방구 인스타그램 @baemin_store</li>
+        </ul>
+        <ul class="footer__service-link">
+          <li><a href="">공지사항</a></li>
+          <li><a href="">1:1 문의</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li class="hidden"><a href="">판매처 안내</a></li>
+        </ul>
+      </section>
+      <!-- footer service end -->
+      <!-- footer button start -->
+
+      <div class="footer__button">
+        <a href="#" role="button" id="btn1">자세히보기</a>
+      </div>
+      <!-- footer button end -->
+      <!-- footer__address start -->
+
+      <div id="hidden_address" class="hidden">
+        <section class="footer__address">
+          <address class="footer__address-info">
+            <ul>
+              <li>(주)우아한형제들</li>
+              <li>대표 : 김범준</li>
+              <li>주소 : 서울특별시 송파구 위례성대로 2 장은빌딩</li>
+            </ul>
+            <ul>
+              <li>사업자번호 : 120-87-65763</li>
+              <li>통신판매업신고 : 2012-서울송파-0515</li>
+              <li>이메일 : baemin_store@woowahan.com</li>
+            </ul>
+            <ul>
+              <li>고객센터 : 1670-9902</li>
+              <li>팩스 : 050-6050-0400</li>
+              <li class="hidden_desk">이메일 : baemin_store@woowahan.com</li>
+              <li>호스팅제공 : 엔에이치엔고도(주)</li>
+            </ul>
+          </address>
+        </section>
+        <!-- footer__address end -->
+        <!-- footer__end start -->
+
+        <p class="footer__end-notice">
+          고객님의 안전거래를 위해 현금 등으로 결제 시 <br />
+          NHN한국사이버결제(주)의 구매안전 서비스를 이용하실 수 있습니다.
+          <br />
+          <a href="#">[서비스 가입사실 확인 ]</a>
+        </p>
+      </div>
+      <section class="footer__end">
+        <small class="footer__end-right">
+          &copy; Woowa Brothers Corp. All right Reserved
+        </small>
+        <!-- <div>
+          Icons made by
+          <a href="https://www.freepik.com/" title="Freepik">&copy; Freepik</a> from
+          <a href="https://www.flaticon.com/" title="Flaticon"></a>
+             www.flaticon.com</a
+          >
+        </div> -->
+      </section>
+      <!-- footer__end end -->
+    </footer>
+  </div>
+  <script src="../js/tab-control.js"></script>
+</body>
+
+</html>
