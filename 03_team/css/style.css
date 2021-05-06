@@ -1009,6 +1009,7 @@ figure {
     align-items: stretch;
     flex-wrap: nowrap;
     border-bottom: 1px solid #ddd;
+    position: relative;
   }
   .header__logo {
     height: 45px;
@@ -1246,6 +1247,10 @@ figure {
   .--isScrolled .navigation__category-list {
     padding: 0.3125em 0;
   }
+}
+
+.open-menu {
+  cursor: pointer;
 }
 
 /* ---------------------------------- */
