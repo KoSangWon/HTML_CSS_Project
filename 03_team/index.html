@@ -44,11 +44,11 @@
                             class="header__img__image" /></a>
                 </h1>
                 <button class="open-menu" aria-label="메뉴 열기"></button>
-                <div class="modal"></div>
+                <div class="modal --isActivate"></div>
                 <div class="float-menu">
                     <section class="nav-header">
                         <h2 class="a11yHidden">사용자 로그인 창</h2>
-                        <a href="#" class="nav-header__user --isLogout">
+                        <a href="#" class="nav-header__user --isLogin">
                             <span class="--noUser"><strong class="emphasize"><span aria-hidden="true"
                                         class="surprized-text">앗!</span>로그인</strong>이 필요해요<span
                                     aria-hidden="true">&#62;</span></span>
@@ -134,7 +134,7 @@
                     <li class="banner__item is--top">
                         <h4 class="a11yHidden">재생지에 콩기름으로 인쇄한 일기장</h4>
                         <a href="#">
-                            <img class="responsiveImg" src="./images/banner1.png" alt="재생지에 콩기름으로 인쇄한 일기장" />
+                            <img class="responsiveImg" src="./images/banner1.png" alt="" />
                         </a>
                     </li>
                     <li class="banner__item">
@@ -228,10 +228,10 @@
                                         </div>
                                         <em class="product__sale">10%</em>
                                     </a>
-                                    <div role="button" class="like">
+                                    <div class="like">
                                         <span class="a11yHidden">찜</span>
                                     </div>
-                                    <div role="button" class="cart">
+                                    <div class="cart">
                                         <span class="a11yHidden">장바구니</span>
                                     </div>
                                 </div>
@@ -432,6 +432,7 @@
                                     <em class="product__sale">10%</em>
                                 </a>
                             </div>
+
                         </li>
                         <li class="products__item sale__item">
                             <a href="#">
@@ -567,7 +568,6 @@
         </footer>
         <!-- footer 끝 -->
     </div>
-    <script src="./js/header.js"></script>
 </body>
 
 </html>
