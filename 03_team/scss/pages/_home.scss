@@ -1,17 +1,15 @@
+/* banner animation */
 @keyframes opa1 {
     0% {
         opacity: 0;
     }
-
     17% {
         opacity: 1;
     }
-
     33% {
         opacity: 0;
         display: none;
     }
-
     100% {
         opacity: 0;
     }
@@ -22,21 +20,17 @@
         opacity: 0;
         display: none;
     }
-
     33% {
         opacity: 0;
         display: block;
     }
-
     50% {
         opacity: 1;
     }
-
     66% {
         opacity: 0;
         display: none;
     }
-
     100% {
         opacity: 0;
     }
@@ -47,45 +41,48 @@
         opacity: 0;
         display: none;
     }
-
     66% {
         opacity: 0;
         display: block;
     }
-
     83% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
     }
 }
 
+/* main page 기본 패딩 제거 */
 
+/* banner */
 .banner {
     background-color: #E2E2E2;
     position: relative;
     width: 100%;
+    padding-top: em(2);
 
     &__item:nth-child(1) {
-        position: absolute;
-        top: 0;
-        left: 0;
         animation: opa1 9s infinite linear;
     }
 
     &__item:nth-child(2) {
         position: absolute;
-        top: 0;
+        top: em(2);
         left: 0;
+        // transform: translateY(-200px);
+        // background-color: transparent;
         animation: opa2 9s infinite linear;
     }
 
     &__item:nth-child(3) {
         position: absolute;
-        top: 0;
+        top: em(2);
         left: 0;
         animation: opa3 9s infinite linear;
     }
+}
+
+.is--top {
+    z-index: 100;
 }

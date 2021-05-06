@@ -11,3 +11,18 @@
 .a11yHidden {
     @include a11yHidden();
 }
+
+@mixin focus{
+    &:focus{
+      outline: 0;
+      border-radius: 2px;
+      box-shadow: 0 0 0 2px rgba(#29C1BC, 0.8);
+    }
+  }
+  
+  @mixin focusVisible{
+    @include focus;
+    &:focus:not(:focus-visible){ 
+      box-shadow: none;
+    }
+  }

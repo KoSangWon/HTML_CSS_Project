@@ -1,7 +1,429 @@
+/* ---------------------------------- */
+/*              헤더 영역 작성              */
+/* ---------------------------------- */
 .header {
-    position: sticky;
+    position: fixed;
+    left: 0;
     top: 0;
+    width: 100%;
     z-index: 1000;
-    min-height: 100px;
-    background-color: aqua;
+    background-color: white;
+
+
+    @at-root .nav-header{
+        background-color: white;
+    }
+
+    @at-root .nav-header__user {
+        
+        display: inline-block;
+        padding: em(25);
+
+
+        @at-root .emphasize{
+            font-size: rem(25);
+        }
+
+        @at-root .surprized-text{
+            display: block;
+        }
+
+        @at-root .name{
+            display: block;
+            font-size: rem(20);
+            padding-bottom: em(3);
+        }
+
+        
+    
+    }
+
+
+    /* ------------ 헤더 영역(모바일) ----------- */
+
+    @include mobile{
+
+        // 헤더가 normal flow를 벗어났기 때문에 여백을 주어야 한다.(모바일)
+        & + .main{
+            margin-top: em(45);
+        }
+
+        // skip-navigation 생겼을 때 여백 조정
+        @at-root .--isTabbed {
+
+            & ~ .main{
+                margin-top: em(165);
+            }
+        }
+
+        &-inner{
+            @include flexbox($justify-content:space-between);
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* -------------- 로고 영역 (모바일) ------------- */
+
+        &__logo{
+            height: 45px;
+        }
+
+        &__logo__link{
+            display: inline-block;
+        }
+
+        &__img__image{
+            max-width: 102px;
+        }
+        
+        /* ------------- 메뉴 열기 (모바일) ------------- */
+
+        @at-root .open-menu {
+            padding: 0;
+            margin: 0;
+            height: 45px;
+            width: 45px;
+            background: url(../images/nav-icon@3x.png) white 50% no-repeat;
+            background-size: 60% 60%;
+            border: none;
+        }
+
+        /* -------- 모달 네비게이션 기본 레이아웃 (모바일) -------- */
+        
+        @at-root .modal{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            z-index: 5;
+            background-color: rgba($color: #000000, $alpha: 0.8);
+            backdrop-filter: blur(2px);
+
+
+            /* --------- 모달 종료 버튼 (모바일) --------- */
+
+            &__exit {
+                position: absolute;
+                right: em(1);
+                top: em(10);
+                border: none;
+                width: em(20);
+                height: em(20);
+                font-size: rem(30);
+                color: #171717;
+                background-color: white;
+                cursor: pointer;
+            }
+
+        }
+        
+        
+
+        @at-root .float-menu{
+            position: fixed;
+            top: 0;
+            left: 25%;
+            right: 0;
+            bottom: 0;
+            background:#f3f3f3;
+            z-index: 10;
+            overflow-y: scroll;
+            transform: translateX(100vw);
+            transition: transform 1.2s;
+        }
+
+        /* --- 로그인, 로그아웃 상태에 따라 모달 문구가 다르다 (모바일) -- */
+
+        @at-root .--noUser, .--User
+        {
+            display: none;
+        }
+
+        @at-root .--isLogin{
+            .--User{
+                display: block;
+            }
+        }
+
+        @at-root .--isLogout{
+
+            .--noUser{
+                display: block;
+            }
+
+        }
+
+        /* ---------- 모달 네비게이션 활성화 (모바일) ---------- */
+        
+        @at-root .modal.--isActivate{
+            display: block;
+            animation: modal-appear 0.8s;
+            & + .float-menu {
+                display: block;
+                transform: none;
+            }
+
+        }
+
+        &__member-wrapper{
+            background-color: white;;
+        }
+
+        &__member-list {
+            @include flexbox($justify-content:space-between, $flex-wrap:wrap);
+            
+            font-size: rem(12px);
+            width: 80%;
+            margin: 0 auto;
+            
+        }
+
+        &__member-item{
+            text-align: center;
+
+            img{
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+
+        &__member-link{
+            display: inline-block;
+            padding: em(10);
+            margin: em(6);
+        }
+
+        &__member-item span{
+            display: block;
+            text-align: center;
+            margin-top: em(7);
+        }
+
+        /* --------- 주요 네비게이션 (모바일) --------- */
+
+        @at-root .navigation{
+
+            margin-top: em(10);
+
+            &__category{
+                padding: em(10) em(25);
+                // min-height: 100vh;
+                background-color: white;
+            }
+
+
+            &__title{
+                font-size: rem(18);
+                font-weight: 700;
+            }
+
+            &__title, &__category-item a{
+                display: block;
+                padding: em(14) 0;
+                margin: em(15) 0;
+            }
+
+            &__category-item a{
+                border-bottom: 1px solid #ececec;
+            }
+        }
+
+        
+    }
+
+    /* ----------- 헤더 영역 데스크탑 ----------- */
+    @include desktop{
+
+        // 헤더가 normal flow를 벗어났기 때문에 여백을 주어야 한다.
+
+        & + .main{
+            margin-top: em(159);
+        }
+    
+        @at-root .--isScrolled{
+            & ~ .main{
+                margin-top: em(100);
+            }
+        }
+
+        // skip-navigation이 나타났을 경우(unscrolled)
+        @at-root .--isTabbed {
+
+            & ~ .main{
+                margin-top: em(279);
+            }
+            
+        }
+        
+        &-inner{
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* ---------- 데스크탑 없애 버릴 요소 --------- */
+        &__member-list img
+        {
+            display: none;
+        }
+
+        @at-root .open-menu,
+        .modal__exit,
+        .nav-header__user{
+            display: none;
+        }
+
+        @at-root .navigation{
+
+            &__title{
+                display: none;
+            }
+
+        }
+
+        /* ---------- 헤더 영역 데스크탑 배치 --------- */
+
+        // 로고 영역(데스크탑)
+        &__logo{
+            position: absolute;
+            left: 50%;
+            top: em(35);
+            transform: translateX(-50%);
+        }
+
+        &__logo__link{
+            display: inline-block;
+        }
+
+        &__img__image{
+            width: 156px;
+        }
+
+        // 사용자 메뉴(데스크탑)
+        &__member-list{
+            @include flexbox($justify-content:flex-end);
+            padding-bottom: em(100);
+            font-size: rem(14);
+        }
+
+        &__member-item{
+            box-sizing: border-box;
+        }
+
+        
+        &__member-item:nth-child(-n+3)::after{
+            content: "";
+            font-size: rem(3px);
+            position: relative;
+            top: -1.5px;
+            border-left:1px solid #ddd;
+            margin: 0 em(40);
+        }
+        
+        &__member-item:last-child{
+            margin-right: em(10);
+        }
+
+        &__member-link{
+            display: inline-block;
+            padding: em(10);
+        }
+
+        // 주요 네비게이션 영역(데스크탑)
+        @at-root .navigation {
+            
+            &__category-list{
+                @include flexbox($justify-content: center);
+            }
+
+            &__category-item a{
+                display: block;
+                padding: em(10);
+                margin: 0 em(6);
+            }
+
+        }
+
+    /* -------- 홈페이지 스크롤시 헤더 레이아웃 ------- */
+    
+    @at-root .--isScrolled {
+        
+        & .header {
+
+            &__logo{
+                top: em(5);
+            }
+
+            &__img__image{
+                width: 86px;
+            }
+
+            &__member-list{
+                padding: em(10) 0;
+            }
+
+            &__member-wrapper::after{
+                content: "";
+                display: block;
+                position: relative;
+                width: 100vw;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom: 1px solid #eaeaea;
+            }
+        }
+
+        & .navigation{
+
+            &__category-list{
+                padding: em(5) 0;
+            }
+
+        }
+
+    }
+
+
+    }
+    
+}
+
+
+/* ---------------------------------- */
+/*           모달 애니메이션 영역 작성           */
+/* ---------------------------------- */
+
+@keyframes modal-appear {
+    0%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* ---------------------------------- */
+/*           본문 내용 바로 가기 적용           */
+/* ---------------------------------- */
+
+.skip {
+    position: absolute;
+    top: -200px;
+    width: 100%;
+
+    &:focus-within {
+        top: 0;
+        z-index: 9999;
+        & + .header-inner {
+            margin-top: em(120);
+        }
+    }
+     & a {
+         display: block;
+         border: 1px solid #ddd;
+         padding: em(5) 0;
+     }
 }

@@ -25,6 +25,3 @@ const changeTabs = (e) => {
 
   document.querySelector(`#${target.getAttribute("aria-controls")}`).removeAttribute("hidden");
 };
-
-
-
