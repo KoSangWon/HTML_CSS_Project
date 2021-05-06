@@ -11,3 +11,10 @@
   @include autoMargin();
   @content;
 }
+
+// 상품 상세 설명 이미지 설정
+@mixin goodsImg {
+  display: block;
+  width: 100%;
+  margin-top: em(20);
+}

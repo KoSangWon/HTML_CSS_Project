@@ -93,17 +93,136 @@
       </section>
 
       <!-- 탭 -->
-      <ul class="tabs">
-        <li><a href="#" role="button">상세정보</a></li>
-        <li><a href="#" role="button">기본정보</a></li>
-        <li><a href="#" role="button">상품후기</a></li>
-        <li><a href="#" role="button">상품문의</a></li>
+      <ul class="tab-list" role="tablist" aria-label="상품 정보, 후기, 문의 탭 메뉴">
+        <li role="none">
+          <a href="#detailInfo" role="tab" aria-selected="false" aria-controls="detailInfo" id="tab1">상세정보</a>
+        </li>
+        <li role="none">
+          <a href="#basicInfo" role="tab" aria-selected="false" aria-controls="basicInfo" id="tab2">기본정보</a>
+        </li>
+        <li role="none">
+          <a href="#review" role="tab" aria-selected="true" aria-controls="review" id="tab3">상품후기</a>
+        </li>
+        <li role="none">
+          <a href="#question" role="tab" aria-selected="false" aria-controls="question" id="tab4">상품문의</a>
+        </li>
       </ul>
+
+      <section hidden id="detailInfo" class="goods__detail-info" role="tabpanel">
+        <h3 class="goods__detail-info-heading">상세정보</h3>
+
+        <div class="ifream-wrapper">
+          <iframe src="https://www.youtube.com/embed/1dqWk7hlDKE" title="유튜브 배달의 민족 효자손 영상"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <img src="../images/goods/goods_born.jpg" alt="배민문방구 효자손은 마음을 담아 제작하였습니다." class="goods__detail-info-born" />
+        <img src="../images/goods/goods_make.jpg" alt="효자손이 재탄생하였습니다." class="goods__detail-info-new-make" />
+        <img src="../images/goods/goods_etc.jpg" alt="배민 효자손의 쓸데없는 설명입니다." class="goods__detail-info-etc" />
+
+        <details open class="goods__details">
+          <summary>상품필수 정보</summary>
+          <dl class="goods__details-list">
+            <dt>종류</dt>
+            <dd>효자손</dd>
+            <dt>소재</dt>
+            <dd>플라스틱</dd>
+            <dt>치수</dt>
+            <dd>26 &times; 425.5mm / 5mm</dd>
+            <dt>제조사</dt>
+            <dd>(주)우아한형제들</dd>
+            <dt>제조국</dt>
+            <dd>한국</dd>
+            <dt>품질보증기준</dt>
+            <dd>관련 법 및 소비자분쟁해결 규정에 따름</dd>
+            <dt>AS 책임자와 전화번호</dt>
+            <dd>배민문방구 고객센터 1670-9902</dd>
+          </dl>
+        </details>
+
+      </section>
+      <section hidden id="basicInfo" class="goods__basic-info" role="tabpanel">
+        <h3 class="goods__basic-info-heading">기본정보</h3>
+      </section>
+      <section id="review" class="goods__review" role="tabpanel">
+        <h3 class="goods__review-heading">상품후기</h3>
+        
+        <ul class="goods__user-review">
+          <li>
+            <dl class="goods__review-info">
+              <dt class="goods__review-info-key">만족도</dt>
+              <dd class="goods__review-info-score">매우 만족</dd>
+              <dt class="goods__review-info-key">작성자</dt>
+              <dd class="goods__review-info-author">손오공</dd>
+              <dt class="goods__review-info-key">작성일</dt>
+              <dd class="goods__review-info-date">
+                <time datetime="2021-05-03">2021.05.03</time>
+              </dd>
+              <dt class="goods__review-info-key">작성 내용</dt>
+              <dd class="goods__review-info-content">
+                <details>
+                  <summary>ㅋㅋㅋ 원래 고급스러운 맛으로 쓰려한거니까</summary>
+                  <img src="../images/goods/review-img.jpg" alt="" />
+                  <p>애플 디자인 패키지 같아 고급스럽고 재밌네요</p>
+                </details>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="goods__review-info">
+              <dt class="goods__review-info-key">만족도</dt>
+              <dd class="goods__review-info-score">만족</dd>
+              <dt class="goods__review-info-key">작성자</dt>
+              <dd class="goods__review-info-author">저팔계</dd>
+              <dt class="goods__review-info-key">작성일</dt>
+              <dd class="goods__review-info-date">
+                <time datetime="2021-05-03">2021.05.03</time>
+              </dd>
+              <dt class="goods__review-info-key">작성 내용</dt>
+              <dd class="goods__review-info-content">
+                <details>
+                  <summary>ㅋㅋㅋ 원래 고급스러운 맛으로 쓰려한거니까</summary>
+                  <img src="../images/goods/review-img.jpg" alt="" />
+                  <p>애플 디자인 패키지 같아 고급스럽고 재밌네요</p>
+                </details>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="goods__review-info">
+              <dt class="goods__review-info-key">만족도</dt>
+              <dd class="goods__review-info-score">매우 불만족</dd>
+              <dt class="goods__review-info-key">작성자</dt>
+              <dd class="goods__review-info-author">사오정</dd>
+              <dt class="goods__review-info-key">작성일</dt>
+              <dd class="goods__review-info-date">
+                <time datetime="2021-05-03">2021.05.03</time>
+              </dd>
+              <dt class="goods__review-info-key">작성 내용</dt>
+              <dd class="goods__review-info-content">
+                <details>
+                  <summary>ㅋㅋㅋ 원래 고급스러운 맛으로 쓰려한거니까</summary>
+                  <img src="../images/goods/review-img.jpg" alt="" />
+                  <p>애플 디자인 패키지 같아 고급스럽고 재밌네요</p>
+                </details>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+
+        <a hidden href="#" class="goods__write-review">후기작성</a>
+      </section>
+      <section hidden id="question" class="goods__question" role="tabpanel">
+        <h3 class="goods__question-heading">상품문의</h3>
+      </section>
+
     </main>
 
     <!-- 푸터 -->
     <footer class="footer">푸터</footer>
   </div>
+  <script src="../js/tab-control.js"></script>
 </body>
 
 </html>
