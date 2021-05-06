@@ -1,0 +1,6 @@
+@mixin thumbNail{
+    width: 66px;
+    height: 75px;
+    float: left;
+    @content;
+}

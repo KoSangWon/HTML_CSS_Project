@@ -39,9 +39,21 @@ a {
     text-decoration: none;
 }
 
+
 // fieldset 영역 제거
 fieldset {
     border: 0;
     margin: 0;
     padding: 0;
+}
+
+/* -------------- 폰트 적용 ------------- */
+
+body {
+    font-family: 'Spoqa Han Sans', 'sans-serif';
+}
+
+// figure 요소 마진 제거
+figure {
+    margin: 0;
 }
