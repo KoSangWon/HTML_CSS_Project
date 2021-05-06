@@ -1,0 +1,281 @@
+/* 상품 section 최상위 컨테이너 */
+.products {
+    padding: 0 20px;
+}
+
+/* 각 리스트 위 공통 마진 */
+.products__best,
+.products__new,
+.mds__pick,
+.products__sale {
+    margin-top: em(40);
+
+    /* 각 리스트 제목 */
+    &-heading {
+        font-size: rem(28);
+        font-weight: 700;
+        padding-bottom: em(20, 28);
+    }
+}
+
+/* 상품 리스트 공통(베스트 상품, 신상품, 할인 상품) */
+.products__list {
+    @include desktop {
+        @include flexbox(row, space-between, stretch, wrap);
+    }
+
+    @include mobile {
+        @include flexbox(column);
+    }
+}
+
+/* 상품 컨테이너 공통(베스트 상품, 신상품, 할인 상품) */
+.products__item {
+    margin-bottom: em(10);
+
+    @include desktop {
+        width: 21%;
+    }
+}
+
+/* 상품 정보 공통 */
+.product {
+    padding-top: em(3);
+    position: relative;
+
+    &__info {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        padding-left: em(10);
+        margin-top: em(2);
+
+        @include desktop {
+            padding-left: rem(3);
+            margin-top: rem(5);
+        }
+    }
+
+    &__name {
+        font-size: em(16);
+        margin-bottom: em(10);
+        color: $mainBlack;
+    }
+
+    &__price {
+        color: $mainBlack;
+        font-size: em(18);
+        margin-bottom: em(10);
+        font-weight: 700;
+
+        @include desktop {
+            margin-bottom: rem(2);
+        }
+    }
+
+    &__price-origin {
+        margin-bottom: em(10);
+        font-size: rem(12);
+    }
+
+    &__sale {
+        font-style: normal;
+        order: -1;
+        color: $saleColor;
+        font-weight: 700;
+        font-size: rem(18);
+        margin-bottom: em(10);
+    }
+}
+
+/* desktop에서만 노출되는 아이템 */
+.only-desktop-item {
+    @include mobile {
+        display: none;
+    }
+}
+
+/* 베스트 상품 리스트 */
+// .best__list {}
+
+/* 베스트 상품 아이템 */
+.best__item {
+    @include mobile {
+        img {
+            float: left;
+            max-width: 30%;
+        }
+    }
+}
+
+/* 신상품 리스트 */
+.new__list {
+    @include mobile {
+        overflow: scroll;
+        flex-direction: row;
+    }
+
+}
+
+
+/* 신상품 아이템 */
+.new__item {
+    @include desktop {
+        img {
+            @include responsiveImg;
+        }
+    }
+
+    @include mobile {
+        padding: em(15) em(5);
+
+        img {
+            width: 150px;
+        }
+
+        .product__info {
+            padding-left: rem(1);
+            padding-right: rem(3);
+        }
+    }
+}
+
+/* 찜, 카트 아이콘 */
+.new__item:hover .like {
+    top: -30px;
+    opacity: 1;
+}
+
+.new__item:hover .cart {
+    top: -30px;
+    opacity: 1;
+}
+
+.like {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 10%;
+    height: 20px;
+    background-image: url('./../../images/like.png');
+    background-size: cover;
+    background-color: white;
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.cart {
+    position: absolute;
+    top: 0;
+    left: 55%;
+    width: 10%;
+    height: 20px;
+    background-image: url('./../../images/cart.png');
+    background-size: cover;
+    background-color: white;
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+/* 추천 선물 리스트 */
+.pick__item {
+    margin-bottom: rem(40);
+
+    @include desktop {
+        @include flexbox(row, space-between);
+    }
+}
+
+
+/* 추천 선물 이미지 */
+.pick__item-img {
+    &__first {
+        background: url('./../../images/pick_sprites.png') 0 0 no-repeat;
+        -webkit-background-size: 200% 100%;
+        background-size: 200% 100%;
+
+        @include desktop {
+            width: 70vw;
+            height: 40vw;
+        }
+
+        @include mobile {
+            width: 93vw;
+            height: 53vw;
+        }
+    }
+
+    &__second {
+        background: url('./../../images/pick_sprites.png') 100% 0 no-repeat;
+        -webkit-background-size: 200% 100%;
+        background-size: 200% 100%;
+
+        @include desktop {
+            width: 70vw;
+            height: 35vw;
+        }
+
+        @include mobile {
+            width: 93vw;
+            height: 53vw;
+        }
+    }
+}
+
+/* 추천 선물 정보 */
+.pick__item-info {
+    @include desktop {
+        width: 24vw;
+        padding: em(12) 0 0 rem(10);
+    }
+
+    @include mobile {
+        padding: em(6) 0 em(30) rem(10);
+    }
+}
+
+/* 추천 선물 정보 설명 */
+.pick__item-info__desc {
+    display: block;
+
+    @include desktop {
+        font-size: rem(26);
+        margin-bottom: em(10, 26);
+    }
+
+    @include mobile {
+        font-size: rem(15);
+        margin-bottom: em(10, 15);
+    }
+}
+
+/* 추천 선물 정보 제목 */
+.pick__item-info__title {
+    @include desktop {
+        font-size: rem(15);
+    }
+
+    @include mobile {
+        font-size: rem(22);
+    }
+}
+
+/* 할인 리스트 */
+.sale__list {
+    @include mobile {
+        @include flexbox(row, space-between, stretch, wrap);
+    }
+}
+
+/* 할인 아이템 */
+.sale__item {
+    @include mobile {
+        width: 48%;
+        .product__info {
+            padding-left: rem(1);
+            padding-right: rem(3);
+        }
+    }
+}

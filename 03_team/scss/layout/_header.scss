@@ -58,6 +58,7 @@
 
         &-inner{
             @include flexbox($justify-content:space-between);
+            border-bottom: 1px solid #ddd;
         }
 
         /* -------------- 로고 영역 (모바일) ------------- */
@@ -420,7 +421,10 @@
     & {
         display: block;
         width: 100%;
-        position: absolute;
+        // position: absolute;
+        position: fixed;
+        left: 0;
+        top: 0;
         font-size: rem(16px);
         z-index: 1100;
         background-color: white;
