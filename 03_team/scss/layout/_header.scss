@@ -260,6 +260,7 @@
         &-inner{
             max-width: 1000px;
             margin: 0 auto;
+            position: relative;
         }
 
         /* ---------- 데스크탑 없애 버릴 요소 --------- */
@@ -408,37 +409,21 @@
 /*           본문 내용 바로 가기 적용           */
 /* ---------------------------------- */
 
-.skip{
-    display: none;
-}
- 
- .--isTabbed{
+.skip {
+    position: absolute;
+    top: -200px;
+    width: 100%;
 
-    & ~ .header{
-        margin-top: em(120);
-    }
-
-    & {
-        display: block;
-        width: 100%;
-        // position: absolute;
-        position: fixed;
-        left: 0;
+    &:focus-within {
         top: 0;
-        font-size: rem(16px);
-        z-index: 1100;
-        background-color: white;
-
-        
+        z-index: 9999;
+        & + .header-inner {
+            margin-top: em(120);
+        }
     }
-
-    & a {
-        display: block;
-        border: 1px solid #ddd;
-        padding: em(5) 0;
-    }
-         
- } 
-
-
-
+     & a {
+         display: block;
+         border: 1px solid #ddd;
+         padding: em(5) 0;
+     }
+}
