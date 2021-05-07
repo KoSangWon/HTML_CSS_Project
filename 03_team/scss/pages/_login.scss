@@ -3,11 +3,11 @@
 }
 
 .login__save-saveId:focus-within {
-    outline: 3px solid #aaa;
+    outline: 3px solid blue;
 }
 
 :focus {
-    outline: 3px solid #aaa;
+    outline: 3px solid blue;
 }
 
 :focus:not(:focus-visible) {
