@@ -173,8 +173,9 @@
 - 기존 상품후기 페이지의 경우 모바일은 `<div>, <span>, <a>` 등의 태그로 구성되어 있고, 데스크탑의 경우도 `<table>`로 구성되어 있으나 `<thead>` 태그가 `displsy: none`으로 되어있어,  스크린 리더 등 보조 기기 사용자가 후기 내용이 어딘지, 작성자가 누군지 등을 정확히 파악하기 어려웠습니다.
 - `<dl>, <dt>, <dd>` 태그를 활용하여 `Name`과 `Value`로 구성해 정보를 정확히 파악할 수 있게 구성하였습니다.
 - **수정 전**
-<img src="./md-image/review-before.png" width="1100px" style="border: 1px solid #181818" />
+<img src="../images/md-image/review-before.png" width="1100px" style="border: 1px solid #181818" />
 - **수정 후**
+  
   ```html
   <dl class="goods__review-info">
     <dt class="goods__review-info-key">만족도</dt>
@@ -213,6 +214,10 @@
 
 ###### 개선 후
 <img src="../images/md-image/lighthouse-mobile-after.png" width="1100px" style="border: 1px solid #181818" />
+
+#### 문법 검사 결과
+<img src="../images/md-image/no-error.png" width="1100px" style="border: 1px solid #181818" />
+
 
 #### 프로젝트를 진행하며 느낀점
 - 평소 관심이 많았던 우아한 형제들에서 만든 배민 문방구를 분석한 다음 더 좋게 만든다는게 너무 재밌는 활동이었던 것 같다. 그리고 몸이 불편하지 않은 내가 쇼핑몰을 이용할 때는 불편한지 몰랐지만, 스크린 리더 등의 보조기기를 사용하시는 분들은 많이 불편하겠다는 것을 느꼈습니다. 앞으로 나아가야 할 길은 멀지만 조금씩이라도 모두가 편안하게 이용할 수 있는 웹 페이지를 만들 것입니다.
