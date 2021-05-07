@@ -142,7 +142,8 @@
               <span class="goods-view__prdt-name">효자손. 혼자서도 잘해요</span>
               <span class="goods-view__order-cnt">
                 <button type="button" class="btn-down" title="감소"></button>
-                <input type="number" title="수량" value="1" readonly />
+                <label for="cnt" title="수량"></label>
+                <input id="cnt" type="number" value="1" readonly />
                 <button type="button" class="btn-up" title="증가"></button>
               </span>
               <span class="goods-view__order-price">
@@ -203,7 +204,7 @@
             <dt>소재</dt>
             <dd>플라스틱</dd>
             <dt>치수</dt>
-            <dd>26 &times; 425.5mm / 5mm</dd>
+            <dd>26 x 425.5mm / 5mm</dd>
             <dt>제조사</dt>
             <dd>(주)우아한형제들</dd>
             <dt>제조국</dt>
@@ -297,7 +298,7 @@
     <footer class="footer" id="footer">
       <h2 class="a11yHidden">배민 푸터</h2>
       <!-- footer service start -->
-      <section class="footer__service">
+      <div class="footer__service">
         <div class="footer__logo hidden">
           <img src="../images/footer_logo_new.png" alt="로고" />
         </div>
@@ -314,7 +315,7 @@
           <li><a href="#">개인정보처리방침</a></li>
           <li class="hidden"><a href="#">판매처 안내</a></li>
         </ul>
-      </section>
+      </div>
       <!-- footer service end -->
       <!-- footer button start -->
 
@@ -325,7 +326,7 @@
       <!-- footer__address start -->
 
       <div id="hidden_address" class="hidden">
-        <section class="footer__address">
+        <div class="footer__address">
           <address class="footer__address-info">
             <ul>
               <li>(주)우아한형제들</li>
@@ -344,7 +345,7 @@
               <li>호스팅제공 : 엔에이치엔고도(주)</li>
             </ul>
           </address>
-        </section>
+        </div>
         <!-- footer__address end -->
         <!-- footer__end start -->
 
@@ -355,7 +356,7 @@
           <a href="#">[서비스 가입사실 확인 ]</a>
         </p>
       </div>
-      <section class="footer__end">
+      <div class="footer__end">
         <small class="footer__end-right">
           &copy; Woowa Brothers Corp. All right Reserved
         </small>
@@ -366,7 +367,7 @@
              www.flaticon.com</a
           >
         </div> -->
-      </section>
+      </div>
       <!-- footer__end end -->
     </footer>
   </div>
