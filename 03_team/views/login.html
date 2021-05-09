@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="쓸데없는 거 팔아요! 재미있게 사는 배민문방구 by.배민"
+    />
+    <title>배민문방구 로그인</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/footer.js"></script>
+  </head>
+
+  <body>
+    <div class="baemin">
+      <header class="header">
+        <ul class="skip --isTabbed">
+          <li class="skip__navigation">
+            <a href="#user-list">사용자 메뉴 바로가기</a>
+          </li>
+          <li class="skip__navigation">
+            <a href="#product-list">상품 목록 바로가기</a>
+          </li>
+          <li class="skip__navigation"><a href="#main">본문 바로가기</a></li>
+          <li class="skip__navigation">
+            <a href="#footer">하단 영역 바로가기</a>
+          </li>
+        </ul>
+        <div class="header-inner">
+          <h1 class="header__logo">
+            <a href="../index.html" class="header__logo__link"
+              ><img
+                src="../images/logo.png"
+                alt="로고 이미지"
+                class="header__img__image"
+            /></a>
+          </h1>
+          <button class="open-menu" aria-label="메뉴 열기"></button>
+          <div class="modal"></div>
+          <div class="float-menu">
+            <section class="nav-header">
+              <h2 class="a11yHidden">사용자 로그인 창</h2>
+              <a href="#" class="nav-header__user --isLogout">
+                <span class="--noUser"
+                  ><strong class="emphasize"
+                    ><span aria-hidden="true" class="surprized-text">앗!</span
+                    >로그인</strong
+                  >이 필요해요<span aria-hidden="true">&#62;</span></span
+                >
+                <span class="--User">
+                  <span class="name"
+                    >윤다은님<span aria-hidden="true">&#62;</span></span
+                  >
+                  <strong class="emphasize">나이스 투 미츄&#33;</strong></span
+                >
+              </a>
+            </section>
+            <section class="header__member">
+              <h2 class="a11yHidden">사용자 메뉴 영역</h2>
+              <div class="header__member-wrapper">
+                <ul class="header__member-list" id="user-list">
+                  <li class="header__member-item">
+                    <a class="header__member-link" href="#">
+                      <img src="../images/add-user.svg" alt="" />
+                      <span>회원가입</span>
+                    </a>
+                  </li>
+                  <li class="header__member-item">
+                    <a href="./login.html" class="header__member-link">
+                      <img src="../images/login.svg" alt="" />
+                      <span>로그인</span>
+                    </a>
+                  </li>
+                  <li class="header__member-item">
+                    <a href="#" class="header__member-link">
+                      <img src="../images/mypage.svg" alt="" />
+                      <span>마이페이지</span>
+                    </a>
+                  </li>
+                  <li class="header__member-item">
+                    <a href="#" class="header__member-link">
+                      <img src="../images/cart.svg" alt="" />
+                      <span>장바구니</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <nav class="navigation">
+              <div class="navigation__category">
+                <span class="navigation__title">카테고리</span>
+                <ul class="navigation__category-list" id="product-list">
+                  <li class="navigation__category-item">
+                    <a href="#"><span>전체</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>문구</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>리빙</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>책</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>을지로에디션</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>ㅋㅋ에디션</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>배달이친구들</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>선물세트</span></a>
+                  </li>
+                  <li class="navigation__category-item">
+                    <a href="#"><span>콜라보레이션</span></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <button class="modal__exit" aria-label="메뉴 닫기">&#215;</button>
+          </div>
+        </div>
+      </header>
+      <main class="main" id="main">
+        <div class="login_wrapper">
+          <section class="login">
+            <h2 class="login__heading">회원 로그인</h2>
+            <!-- login form -->
+            <form id="formLogin" action="#" method="post" name="login_form">
+              <fieldset>
+                <legend class="a11yHidden">로그인 영역</legend>
+                <div class="login__form">
+                  <input
+                    type="email"
+                    id="userEmail"
+                    placeholder="아이디"
+                    name="userEmail"
+                    required
+                  />
+                  <label for="userEmail" title="아이디 입력"></label>
+                  <input
+                    type="password"
+                    id="userPw"
+                    placeholder="비밀번호"
+                    name="userPw"
+                    required
+                  />
+                  <label for="userPw" title="비밀번호 입력"></label>
+                </div>
+                <div class="login__save">
+                  <div class="login__save-saveLogin hidden">
+                    <input type="checkbox" id="saveLogin" class="a11yHidden" />
+                    <label for="saveLogin" title="로그인 저장"
+                      >로그인 상태 유지</label
+                    >
+                  </div>
+                  <div class="login__save-saveId">
+                    <input type="checkbox" id="saveId" class="a11yHidden" />
+                    <label for="saveId" title="아이디 저장">아이디 저장</label>
+                  </div>
+                </div>
+                <div class="login__login-box">
+                  <button type="submit" class="login__login-btn">로그인</button>
+                  <!-- 페이스북 로그인 -->
+                  <a href="#" class="login__facebook"
+                    ><span class="facebook">페이스북으로 로그인</span></a
+                  >
+                  <!-- 페이스북 로그인 끝 -->
+                </div>
+              </fieldset>
+            </form>
+            <!-- login form 끝 -->
+            <!-- 회원 정보 확인 -->
+            <div class="login__find">
+              <ul class="">
+                <li>
+                  <a href="#"> 회원가입 </a>
+                </li>
+                <li>
+                  <a href="#"> 아이디 찾기 </a>
+                </li>
+                <li>
+                  <a href="#"> 비밀번호 찾기 </a>
+                </li>
+              </ul>
+            </div>
+            <!-- 회원 정보 확인 끝 -->
+          </section>
+          <!-- login 끝 -->
+          <!-- 비회원 주문 조회 -->
+          <div class="non-members">
+            <h2 class="non-members__heading">비회원 주문조회 하기</h2>
+            <form
+              id="nonMemberOrderCheck"
+              action="#"
+              method="post"
+              name="order_check_form"
+            >
+              <fieldset class="non-members__form">
+                <legend class="a11yHidden">주문자 영역</legend>
+                <input
+                  type="text"
+                  id="userName"
+                  name="userName"
+                  required
+                  class="non-members__form-id"
+                  placeholder="주문자명"
+                />
+                <label for="userName"></label>
+                <input
+                  type="text"
+                  id="orderNum"
+                  name="orderNum"
+                  required
+                  class="non-members__form-num"
+                  placeholder="주문번호"
+                />
+                <label for="orderNum"></label>
+                <button type="submit" class="non-members__check">
+                  조회하기
+                </button>
+              </fieldset>
+            </form>
+            <p class="non-members__notice hidden">
+              <span class="notice1"
+                >주문번호와 비밀번호를 잊으신 경우, 고객센터로 문의하여 주시기
+                바랍니다.</span
+              >
+            </p>
+          </div>
+          <!-- 비회원 주문 조회 끝 -->
+        </div>
+      </main>
+      <footer id="footer" class="footer">
+        <h2 class="a11yHidden">배민 푸터</h2>
+        <!-- footer service start -->
+        <div class="footer__service">
+          <div class="footer__logo hidden">
+            <img src="../images/footer_logo_new.png" alt="로고" />
+          </div>
+          <ul class="footer__service-center">
+            <li class="footer__service-center1">배민문방구 고객센터</li>
+            <li class="footer__service-center2">1670-9902</li>
+            <li>월-금 13:00~18:00 / 주말・공휴일 휴무</li>
+            <li>배민문방구 인스타그램 @baemin_store</li>
+          </ul>
+          <ul class="footer__service-link">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">1:1 문의</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li class="hidden"><a href="#">판매처 안내</a></li>
+          </ul>
+        </div>
+        <!-- footer service end -->
+        <!-- footer button start -->
+
+        <div class="footer__button">
+          <button id="btn1" class="footer__btn">자세히보기</button>
+        </div>
+        <!-- footer button end -->
+        <!-- footer__address start -->
+
+        <div id="hidden_address" class="hidden">
+          <div class="footer__address">
+            <address class="footer__address-info">
+              <ul>
+                <li>(주)우아한형제들</li>
+                <li>대표 : 김범준</li>
+                <li>주소 : 서울특별시 송파구 위례성대로 2 장은빌딩</li>
+              </ul>
+              <ul>
+                <li>사업자번호 : 120-87-65763</li>
+                <li>통신판매업신고 : 2012-서울송파-0515</li>
+                <li>이메일 : baemin_store@woowahan.com</li>
+              </ul>
+              <ul>
+                <li>고객센터 : 1670-9902</li>
+                <li>팩스 : 050-6050-0400</li>
+                <li class="hidden_desk">이메일 : baemin_store@woowahan.com</li>
+                <li>호스팅제공 : 엔에이치엔고도(주)</li>
+              </ul>
+            </address>
+          </div>
+          <!-- footer__address end -->
+          <!-- footer__end start -->
+
+          <p class="footer__end-notice">
+            고객님의 안전거래를 위해 현금 등으로 결제 시 <br />
+            NHN한국사이버결제(주)의 구매안전 서비스를 이용하실 수 있습니다.
+            <br />
+            <a href="#">[서비스 가입사실 확인 ]</a>
+          </p>
+        </div>
+        <div class="footer__end">
+          <small class="footer__end-right">
+            &copy; Woowa Brothers Corp. All right Reserved
+          </small>
+          <div>
+            Icons made by
+            <a href="https://www.freepik.com/" title="Freepik">
+              &copy; Freepik</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </div>
+        </div>
+        <!-- footer__end end -->
+      </footer>
+      <!-- footer 끝 -->
+    </div>
+    <script src="../js/header.js"></script>
+  </body>
+</html>

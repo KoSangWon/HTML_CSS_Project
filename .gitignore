@@ -146,3 +146,10 @@ dist
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Custom
+<<<<<<< HEAD:.gitignore
+**/css
+=======
+**/css
+>>>>>>> dd22516e775f8f0f690cdf8b2df4a910b5f0c768:03_team/.gitignore
